@@ -7,8 +7,8 @@ include '../../../header.php'; // contains the header and call to config.php
     exit();
 } */
 
-//Load all statuses
-$statuses = sql_select("ARTICLE", "*");
+//Load all articles
+$articles = sql_select("ARTICLE", "*");
 ?>
 
 <!-- Bootstrap default layout to display all articles in foreach -->
@@ -21,18 +21,36 @@ $statuses = sql_select("ARTICLE", "*");
                     <tr>
                         <th>Num article</th>
                         <th>Date création</th>
-                        <th>Titre</th>
-                        <th>Num them</th>
+                        <th>Chapô</th>
+                        <th>Accroche</th>
+                        <th>Paragraphe 1</th>
+                        <th>Ss-titre 1</th>
+                        <th>Paragraphe 2</th>
+                        <th>Ss-titre 2</th>
+                        <th>Paragraphe 3</th>
+                        <th>Conclusion</th>
+                        <!-- <th>urlPhoto</th> -->
+                        <th>Numéro thématique</th>
+                        <th>Actions</th>
 
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($statuses as $article) { ?>
+                    <?php foreach ($articles as $article) { ?>
                         <tr>
                             <td><?php echo $article['numArt']; ?></td>
                             <td><?php echo $article['dtCreArt']; ?></td>
                             <td><?php echo $article['libTitrArt']; ?></td>
+                            <td><?php echo $article['libChapoArt']; ?></td>
+                            <td><?php echo $article['libAccrochArt']; ?></td>
+                            <td><?php echo $article['parag1Art']; ?></td>
+                            <td><?php echo $article['libSsTitr1Art']; ?></td>
+                            <td><?php echo $article['parag2Art']; ?></td>
+                            <td><?php echo $article['libSsTitr2Art']; ?></td>
+                            <td><?php echo $article['parag3Art']; ?></td>
+                            <!-- <td><?php echo $article['urlPhotArt']; ?></td> -->
                             <td><?php echo $article['numThem']; ?></td>
+
                             <td>
                                 <a href="update.php?numArt=<?php echo $article['numArt']; ?>" class="btn btn-primary">Edit</a>
                                 <a href="delete.php?numArt=<?php echo $article['numArt']; ?>" class="btn btn-danger">Delete</a>

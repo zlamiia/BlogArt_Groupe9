@@ -3,14 +3,14 @@ include '../../../header.php';
 
 ?>
 
-<!--Bootstrap form-->
+<!--Bootstrap form to create a member-->
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>Créer un compte</h1>
+            <h1>Créer un membre</h1>
         </div>
         <div class="col-md-12">
-            <!--Form to create an account-->
+            <!--Form to create a member-->
             <form action="<?php echo ROOT_URL . '/api/users/create.php' ?>" method="post">
                 <div class="form-group">
                     <label for="prenomMemb">Prenom</label>

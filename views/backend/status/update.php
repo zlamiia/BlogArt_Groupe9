@@ -21,7 +21,7 @@ $libStat = sql_select("STATUT", "libStat", "numStat = $numStat")[0]['libStat'];
             <h1>Update status</h1>
         </div>
         <div class="col-md-12">
-            <!--Form to create a new status-->
+            <!--Form to update a status-->
             <form action="<?php echo ROOT_URL . '/api/status/update.php' ?>" method="post">
                 <div class="form-group">
                     <label for="libStat">libStat</label>

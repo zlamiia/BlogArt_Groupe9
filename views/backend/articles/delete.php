@@ -26,7 +26,7 @@ $numThem = sql_select("ARTICLE", "numThem", "numArt = $numArt")[0]['numThem'];
             <h1>Delete Article</h1>
         </div>
         <div class="col-md-12">
-            <!--Form to create an article -->
+            <!--Form to delete an article -->
             <form action="<?php echo ROOT_URL . '/api/articles/delete.php' ?>" method="post">
                 <div class="form-group">
                     <label for="dtCreArt">Date et heure de création de l'article</label>

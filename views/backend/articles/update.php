@@ -24,14 +24,14 @@ $numThem = sql_select("ARTICLE", "numThem", "numArt = $numArt")[0]['numThem'];
 
 ?>
 
-<!--Bootstrap form to update a status-->
+<!--Bootstrap form to update an article-->
 <div class="container">
     <div class="row">
         <div class="col-md-12">
             <h1>Update status</h1>
         </div>
         <div class="col-md-12">
-            <!--Form to create a new status-->
+            <!--Form to update an article-->
             <form action="<?php echo ROOT_URL . '/api/articles/update.php' ?>" method="post">
                 <div class="form-group">
                     <label for="dtCreArt">Date création article</label>

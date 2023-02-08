@@ -7,11 +7,11 @@ include '../../../header.php'; // contains the header and call to config.php
     exit();
 } */
 
-//Load all statuses
-$statuses = sql_select("MEMBRE", "*");
+//Load all members
+$membres = sql_select("MEMBRE", "*");
 ?>
 
-<!-- Bootstrap default layout to display all articles in foreach -->
+<!-- Bootstrap default layout to display all members in foreach -->
 <div class="container">
     <div class="row">
         <div class="col-md-12">
@@ -19,6 +19,7 @@ $statuses = sql_select("MEMBRE", "*");
             <table class="table table-striped">
                 <thead>
                     <tr>
+                        <th>Numéro memb</th>
                         <th>Prenom memb</th>
                         <th>Nom memb</th>
                         <th>Pseudo memb</th>
@@ -30,8 +31,9 @@ $statuses = sql_select("MEMBRE", "*");
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($statuses as $membre) { ?>
+                    <?php foreach ($membres as $membre) { ?>
                         <tr>
+                            <td><?php echo $membre['numMemb']; ?></td>
                             <td><?php echo $membre['prenomMemb']; ?></td>
                             <td><?php echo $membre['nomMemb']; ?></td>
                             <td><?php echo $membre['pseudoMemb']; ?></td>

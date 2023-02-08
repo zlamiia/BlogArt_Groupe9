@@ -24,7 +24,7 @@ $numStat = sql_select("MEMBRE", "numStat", "numMemb = $numMemb")[0]['numStat'];
             <h1>Update member</h1>
         </div>
         <div class="col-md-12">
-            <!--Form to create a new member-->
+            <!--Form to update a member-->
             <form action="<?php echo ROOT_URL . '/api/users/update.php' ?>" method="post">
                 <div class="form-group">
                     <label for="prenomMemb">Prenom membre</label>
