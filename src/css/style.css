@@ -1,3 +1,4 @@
+/* Index */
 .container{
     border: 1px solid red;
 }
@@ -19,21 +20,20 @@
 .header{
     position: fixed;
     left: 20vw;
-    background-image: url(/src/images/Header.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
     scale: 0.8;
     width: 60vw;
-    padding-bottom: 25px;
-    margin-top: 20px;
+    text-align: center;
+	background: #FFFFFF;
+    border: 2px solid #4247C6;
+    box-shadow: 6px 2px 0px 0px #4247C6;
+    border-radius: 7px;
+    margin-bottom: 10px;
+    margin-top: 25px;
 
 }
 .header-content{
-    margin-top: 1%;
     border: 1px solid red;
-    font-weight: 400;
     font-size: 30px;
-    line-height: 36px;
 }
 a:link{
     background-color: transparent;
@@ -56,10 +56,30 @@ a:active {
     text-decoration: underline;
 }
 
-.home-content{
-    margin-top: 169.88px;
+.title-content{
+    padding-top: 169.88px;
     padding-left: 4.167vw;
     padding-right: 4.167vw;
+}
+.chapo-content{
+    padding-left: 8.334vw;
+    padding-right: 8.334vw;
+}
+.img-content{
+    padding-left: 7vw;
+    padding-right: 7vw;
+}
+.paragraph-content{
+    padding-left: 10.4175vw;
+    padding-right: 10.4175vw;
+}
+.subtitle-content{
+    padding-left: 7vw;
+    padding-right: 7vw;
+}
+.conclusion-content{
+    padding-left: 10.4175vw;
+    padding-right: 10.4175vw;
 }
 
 .subtitle{
@@ -75,26 +95,29 @@ a:active {
     height: 427.31px;
     border: 1px solid red;
 }
-.articles-home-img_box-2{
+.articles-img_box-2{
     background-color: #4247C6;
     height: 354.63px;
     border: 1px solid red;
 }
-.articles-home-text-2{
+.articles-text-2{
     height: 228.83px;
     border: 1px solid red;
 }
-.articles-home-img_box-3{
+.articles-img_box-3{
     background-color: #4247C6;
     height: 354.63px;
     border: 1px solid red;
 }
-.articles-home-text-3{
+.articles-text-3{
     height: 228.83px;
     border: 1px solid red;
 }
-.space-articles-home-2-3{
+.space-articles-2-3{
     width: 3.75vw;
+}
+.space-articles{
+    width: 14.305vw;
 }
 
 .evenement-home-carte-content{
@@ -125,5 +148,103 @@ a:active {
 }
 
 .border{
-    border: 1px solid red;
+    border: 3px solid green;
+}
+
+/* Index2 */
+.ecrire-title{
+    margin-top: 140px;
+    margin-bottom: 50px;
+    padding-left: 4.167vw;
+}
+.ecrire-article{
+    width: 50vw;
+    margin-bottom: 10px;
+}
+.form-div{
+    padding: 0px;
+    margin-bottom: 10px;
+}
+.form-style{
+    width: 48vw;
+    text-align: center;
+	background: #FFFFFF;
+    border: 2px solid #4247C6;
+    box-shadow: 6px 2px 0px 0px #4247C6;
+    border-radius: 55px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+input[type=submit] {
+    background-color: #4247C6;
+    border: none;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 55px;
+    
+}
+
+.comment-section{
+    width: 65vw;
+    height: 1181.03px;
+    background: #FFFFFF;
+    border: 2px solid #4247C6;
+    box-shadow: 6px 2px 0px 0px #4247C6;
+    border-radius: 55px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.form-comment-style{
+    width: 50vw;
+	background: #FFFFFF;
+    border: 2px solid #4247C6;
+    box-shadow: 6px 2px 0px 0px #4247C6;
+    border-radius: 55px;
+    margin-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.form-comment{
+    padding-left: 2vw;
+}
+.comment-user-photo{
+    width: 4vw;
+    height: 60px;
+    text-align: center;
+	background: #FFFFFF;
+    border: 2px solid #4247C6;
+    box-shadow: 6px 2px 0px 0px #4247C6;
+    border-radius: 55px;
+}
+.user-photo-name{
+    align-items: center;
+}
+.comment-user-name{
+    align-items: center;
+    width: auto;
+    margin-left: 1vw;
+    height: 40px;
+	background: #FFFFFF;
+    border: 2px solid #4247C6;
+    box-shadow: 6px 2px 0px 0px #4247C6;
+    border-radius: 55px;
+    /* margin-top: 20px; */
+}
+.comment-user-comment{
+    width: 50vw;
+	background: #FFFFFF;
+    border: 2px solid #4247C6;
+    box-shadow: 6px 2px 0px 0px #4247C6;
+    border-radius: 55px;
+    margin-bottom: 10px;
+    margin-left: 4vw;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
