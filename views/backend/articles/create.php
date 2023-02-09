@@ -7,61 +7,65 @@ include '../../../header.php';
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>Create new Article</h1>
+            <h1>Créer un nouvel article</h1>
         </div>
         <div class="col-md-12">
             <!--Form to create a new article-->
             <form action="<?php echo ROOT_URL . '/api/articles/create.php' ?>" method="post">
                 <div class="form-group">
-                    <label for="dtCreArt">Date et Heure dépôt article <br> Sous la forme : AAAA-MM-JJ HH-MM-SS</label> 
-                    <!-- Il faut mieux gérer la saisie de la date et de l'heure -->
-                    <input id="dtCreArt" class="form-control" type="text" name="dtCreArt">
+                    <label for="dtCreArt">Date et Heure dépôt article</label>
+                    <input id="dtCreArt" class="form-control" type="datetime-local" name="dtCreArt">
                 </div>
+
                 <div class="form-group">
-                    <label for="libTitrArt">Titre</label>
-                    <input id="libTitrArt" class="form-control" type="text" name="libTitrArt">
+                    <label for="libTitrArt">Titre de l'article</label>
+                    <input id="libTitrArt" class="form-control" type="text" name="libTitrArt" required minlength="1" maxlength="100">
                 </div>
-                
-                <!-- IL FAUT METTRE DES TEXT AREA-->
                 
                 <div class="form-group">
                     <label for="libChapoArt">Chapô</label>
-                    <textarea id="libChapoArt" class="form-control" type="text" name="chapo"></textarea>
+                    <textarea id="libChapoArt" class="form-control" type="text" name="libChapoArt" required minlength="1"></textarea>
                 </div>
                 <div class="form-group">
                     <label for="libAccrochArt">Accroche</label>
-                    <input id="libAccrochArt" class="form-control" type="text" name="libAccrochArt">
+                    <input id="libAccrochArt" class="form-control" type="text" name="libAccrochArt" required minlength="1" maxlength="100">
                 </div>
                 <div class="form-group">
                     <label for="parag1Art">Paragraphe 1</label>
-                    <textarea id="parag1Art" class="form-control" type="text" name="parag1"></textarea>
+                    <textarea id="parag1Art" class="form-control" type="text" name="parag1Art" required minlength="1"></textarea>
                 </div>
                 <div class="form-group">
                     <label for="libSsTitr1Art">Sous-titre 1</label>
-                    <input id="libSsTitr1Art" class="form-control" type="text" name="libSsTitr1Art">
+                    <input id="libSsTitr1Art" class="form-control" type="text" name="libSsTitr1Art" required minlength="1" maxlength="100">
                 </div>
                 <div class="form-group">
                     <label for="parag2Art">Paragraphe 2</label>
-                    <input id="parag2Art" class="form-control" type="text" name="parag2Art">
+                    <textarea id="parag2Art" class="form-control" type="text" name="parag2Art" required minlength="1"></textarea>
                 </div>
                 <div class="form-group">
                     <label for="libSsTitr2Art">Sous-titre 2</label>
-                    <input id="libSsTitr2Art" class="form-control" type="text" name="libSsTitr2Art">
+                    <input id="libSsTitr2Art" class="form-control" type="text" name="libSsTitr2Art" required minlength="1" maxlength="100">
                 </div>
                 <div class="form-group">
                     <label for="parag3Art">Paragraphe 3</label>
-                    <input id="parag3Art" class="form-control" type="text" name="parag3Art">
+                    <textarea id="parag3Art" class="form-control" type="text" name="parag3Art" required minlength="1"></textarea>
                 </div>
                 <div class="form-group">
                     <label for="libConclArt">Conclusion</label>
-                    <input id="libConclArt" class="form-control" type="text" name="libConclArt">
+                    <textarea id="libConclArt" class="form-control" type="text" name="libConclArt" required minlength="1"></textarea>
                 </div>
+                <!-- Mieux gérer
                 <div class="form-group">
-                    <label for="numThem">numThem</label>
-                    <input id="numThem" class="form-control" type="text" name="numThem">
+                    <label for="urlPhotArt">URL de la photo</label>
+                    <input id="urlPhotArt" class="form-control" type="text" name="urlPhotArt">
+                </div>
+                -->
+                <div class="form-group">
+                    <label for="numThem">Numéro thématique : entre 1 et 4</label>
+                    <input id="numThem" class="form-control" type="number" name="numThem" required min="1" max="4">
                 </div>
                 <div class="form-group mt-2">
-                    <button type="submit" class="btn btn-primary">Create</button>
+                    <button type="submit" class="btn btn-primary">Créer</button>
                 </div>
             </form>
         </div>
