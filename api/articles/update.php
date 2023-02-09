@@ -33,4 +33,6 @@ if ($newdtCreArt != "" && $newlibTitrArt != "" && $newlibChapoArt != "" && $newl
 }
 
 
+// AFFICHAGE ERREUR SI JAMAIS CHAMPS VIDES A FAIRE
+
 header('Location: ../../views/backend/articles/list.php');

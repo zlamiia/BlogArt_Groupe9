@@ -21,5 +21,7 @@ if ($dtCreArt != "" && $libTitrArt != "" && $libChapoArt != "" && $libAccrochArt
     'dtCreArt, libTitrArt, libChapoArt, libAccrochArt, parag1Art, libSsTitr1Art, parag2Art, libSsTitr2Art, parag3Art, libConclArt, numThem',
     "'$dtCreArt','$libTitrArt', '$libChapoArt', '$libAccrochArt', '$parag1Art', '$libSsTitr1Art', '$parag2Art', '$libSsTitr2Art', '$parag3Art', '$libConclArt', $numThem");
 }
-//Redirection
+
+// AFFICHAGE ERREUR SI JAMAIS CHAMPS VIDES A FAIRE
+
 header('Location: ../../views/backend/articles/list.php');
