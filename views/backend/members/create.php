@@ -33,11 +33,11 @@ $statuts = sql_select("STATUT", "*");
                 </div>
                 <div class="form-group">
                     <label for="passMemb">Mot de passe</label>
-                    <input id="passMemb" class="form-control" type="password" name="passMemb" minlength="1" maxlength="70" required>
+                    <input id="passMemb" class="form-control" type="password" name="passMemb">
                 </div>
                 <div class="form-group">
                 <label for="numArt">Statut</label>
-                <select class="form-select" name="numArt">
+                <select class="form-select" name="numStat">
                     <?php foreach ($statuts as $statut) { ?>
                         <option value="<?php echo $statut['numStat']; ?>"><?php echo $statut['libStat']; ?></option>
                     <?php } ?>

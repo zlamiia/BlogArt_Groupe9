@@ -10,10 +10,6 @@ include '../../../header.php';
 $articles = sql_select("ARTICLE", "*");
 $membres = sql_select("MEMBRE", "*");
 
-$joinmembre = sql_select("LIKEART INNER JOIN MEMBRE ON LIKEART.numMemb = MEMBRE.numMemb", "*");
-$joinarticle = sql_select("LIKEART INNER JOIN ARTICLE ON LIKEART.numArt = MEMBRE.numArt", "*");
-
-
 ?>
 
 <!--Bootstrap form to create a like -->
