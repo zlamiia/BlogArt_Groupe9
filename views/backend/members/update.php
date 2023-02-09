@@ -29,32 +29,27 @@ $numStat = sql_select("MEMBRE", "numStat", "numMemb = $numMemb")[0]['numStat'];
                 <div class="form-group">
                     <label for="prenomMemb">Prenom membre</label>
                     <input id="numMemb" class="form-control" style="display: none" type="text" name="numMemb" value="<?php echo($numMemb) ?>">
-                    <input id="prenomMemb" class="form-control" type="text" name="prenomMemb" value="<?php echo($prenomMemb) ?>">
+                    <input id="prenomMemb" class="form-control" type="text" name="prenomMemb" value="<?php echo($prenomMemb) ?>" required minlength="1" maxlength="70">
                 </div>
                 <div class="form-group">
                     <label for="nomMemb">Nom membre</label>
                     <input id="numMemb" class="form-control" style="display: none" type="text" name="numMemb" value="<?php echo($numMemb) ?>">
-                    <input id="nomMemb" class="form-control" type="text" name="nomMemb" value="<?php echo($nomMemb) ?>">
+                    <input id="nomMemb" class="form-control" type="text" name="nomMemb" value="<?php echo($nomMemb) ?>" required minlength="1" maxlength="70">
                 </div>
                 <div class="form-group">
                     <label for="pseudoMemb">Pseudo membre</label>
                     <input id="numMemb" class="form-control" style="display: none" type="text" name="numMemb" value="<?php echo($numMemb) ?>">
-                    <input id="pseudoMemb" class="form-control" type="text" name="pseudoMemb" value="<?php echo($pseudoMemb) ?>">
+                    <input id="pseudoMemb" class="form-control" type="text" name="pseudoMemb" value="<?php echo($pseudoMemb) ?>" required minlength="1" maxlength="70">
                 </div>
                 <div class="form-group">
-                    <label for="passMemb">Password membre</label>
+                    <label for="passMemb">Mot de passe membre</label>
                     <input id="numMemb" class="form-control" style="display: none" type="text" name="numMemb" value="<?php echo($numMemb) ?>">
-                    <input id="passMemb" class="form-control" type="text" name="passMemb" value="<?php echo($passMemb) ?>">
+                    <input id="passMemb" class="form-control" type="password" name="passMemb" value="<?php echo($passMemb) ?>" minlength="1" maxlength="70" required>
                 </div>
                 <div class="form-group">
                     <label for="eMailMemb">E-mail membre</label>
                     <input id="numMemb" class="form-control" style="display: none" type="text" name="numMemb" value="<?php echo($numMemb) ?>">
-                    <input id="eMailMemb" class="form-control" type="text" name="eMailMemb" value="<?php echo($eMailMemb) ?>">
-                </div>
-                <div class="form-group">
-                    <label for="dtCreaMemb">Date créa membre</label>
-                    <input id="numMemb" class="form-control" style="display: none" type="text" name="numMemb" value="<?php echo($numMemb) ?>">
-                    <input id="dtCreaMemb" class="form-control" type="text" name="dtCreaMemb" value="<?php echo($dtCreaMemb) ?>">
+                    <input id="eMailMemb" class="form-control" type="email" name="eMailMemb" value="<?php echo($eMailMemb) ?>">
                 </div>
                 <div class="form-group">
                     <label for="numStat">Num stat</label>
@@ -62,7 +57,7 @@ $numStat = sql_select("MEMBRE", "numStat", "numMemb = $numMemb")[0]['numStat'];
                     <input id="numStat" class="form-control" type="text" name="numStat" value="<?php echo($numStat) ?>">
                 </div>
                 <div class="form-group mt-2">
-                    <button type="submit" class="btn btn-primary">Update</button>
+                    <button type="submit" class="btn btn-primary">Modifier</button>
                 </div>
             </form>
         </div>

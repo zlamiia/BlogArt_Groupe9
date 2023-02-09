@@ -2,14 +2,14 @@
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
 
-$numMemb = $_POST['numMemb'];
-$newprenomMemb = $_POST['prenomMemb'];
-$newnomMemb = $_POST['nomMemb'];
-$newpseudoMemb = $_POST['pseudoMemb'];
-$newpassMemb = $_POST['passMemb'];
-$neweMailMemb = $_POST['eMailMemb'];
-$newdtCreaMemb = $_POST['dtCreaMemb'];
-$newnumStat = $_POST['numStat'];
+$numMemb = sql_escape($_POST['numMemb']);
+$newprenomMemb = sql_escape($_POST['prenomMemb']);
+$newnomMemb = sql_escape($_POST['nomMemb']);
+$newpseudoMemb = sql_escape($_POST['pseudoMemb']);
+$newpassMemb = sql_escape($_POST['passMemb']);
+$neweMailMemb = sql_escape($_POST['eMailMemb']);
+$newdtCreaMemb = sql_escape($_POST['dtCreaMemb']);
+$newnumStat = sql_escape($_POST['numStat']);
 
 sql_update('MEMBRE',"prenomMemb = '$newprenomMemb'","numMemb = $numMemb");
 sql_update('MEMBRE',"nomMemb = '$newnomMemb'","numMemb = $numMemb");

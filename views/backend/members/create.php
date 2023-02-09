@@ -14,32 +14,31 @@ include '../../../header.php';
             <form action="<?php echo ROOT_URL . '/api/users/create.php' ?>" method="post">
                 <div class="form-group">
                     <label for="prenomMemb">Prenom</label>
-                    <input id="prenomMemb" class="form-control" type="text" name="prenomMemb">
+                    <input id="prenomMemb" class="form-control" type="text" name="prenomMemb" required minlength="1" maxlength="70">
                 </div>
                 <div class="form-group">
                     <label for="nomMemb">Nom</label>
-                    <input id="nomMemb" class="form-control" type="text" name="nomMemb">
+                    <input id="nomMemb" class="form-control" type="text" name="nomMemb" required minlength="1" maxlength="70">
                 </div>
                 <div class="form-group">
                     <label for="pseudoMemb">Pseudo</label>
-                    <input id="pseudoMemb" class="form-control" type="text" name="pseudoMemb">
+                    <input id="pseudoMemb" class="form-control" type="text" name="pseudoMemb" required minlength="1" maxlength="70">
                 </div>
                 <div class="form-group">
                     <label for="eMailMemb">E-mail</label>
-                    <input id="eMailMemb" class="form-control" type="text" name="eMailMemb">
+                    <input id="eMailMemb" class="form-control" type="email" name="eMailMemb">
                 </div>
                 <div class="form-group">
                     <label for="passMemb">Mot de passe</label>
-                    <input id="passMemb" class="form-control" type="text" name="passMemb">
+                    <input id="passMemb" class="form-control" type="password" name="passMemb" minlength="1" maxlength="70" required>
                 </div>
-                <!-- Demander à Gwendal comment gérer le num statut -->
+                <!-- MVP : Faire une liste pour pouvoir choisir les numStat -->
                 <div class="form-group">
-                    <label for="numStat">Num statut</label>
-                    <input id="numStat" class="form-control" type="text" name="numStat">
+                    <label for="numStat">Numéro statut</label>
+                    <input id="numStat" class="form-control" type="number" name="numStat">
                 </div>
-                
                 <div class="form-group mt-2">
-                    <button type="submit" class="btn btn-primary">Créer un compte</button>
+                    <button type="submit" class="btn btn-primary">Créer</button>
                 </div>
             </form>
         </div>

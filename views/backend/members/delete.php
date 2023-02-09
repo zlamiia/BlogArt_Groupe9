@@ -23,7 +23,7 @@ $numStat = sql_select("MEMBRE", "numStat", "numMemb = $numMemb")[0]['numStat'];
             <form action="<?php echo ROOT_URL . '/api/users/delete.php' ?>" method="post">
                 <div class="form-group">
                     <label for="numMemb">Num membre</label>
-                    <input id="numMemb" class="form-control" type="text" name="numMemb" value="<?php echo($numMemb) ?>" readonly="readonly">
+                    <input id="numMemb" class="form-control" type="number" name="numMemb" value="<?php echo($numMemb) ?>" readonly="readonly">
                 </div>
                 <div class="form-group">
                     <label for="prenomMemb">Prénom</label>
@@ -34,7 +34,7 @@ $numStat = sql_select("MEMBRE", "numStat", "numMemb = $numMemb")[0]['numStat'];
                     <input id="nomMemb" class="form-control" type="text" name="nomMemb" value="<?php echo($nomMemb) ?>" readonly="readonly">
                 </div>
                 <div class="form-group">
-                    <label for="passMemb">Password</label>
+                    <label for="passMemb">Mot de passe</label>
                     <input id="passMemb" class="form-control" type="text" name="passMemb" value="<?php echo($passMemb) ?>" readonly="readonly">
                 </div>
                 <div class="form-group">
@@ -50,7 +50,7 @@ $numStat = sql_select("MEMBRE", "numStat", "numMemb = $numMemb")[0]['numStat'];
                     <input id="numStat" class="form-control" type="text" name="numStat" value="<?php echo($numStat) ?>" readonly="readonly">
                 </div>
                 <div class="form-group mt-2">
-                    <button type="submit" class="btn btn-danger">Confirm deletion ?</button>
+                    <button type="submit" class="btn btn-danger">Confirmer la suppression ?</button>
                     <input id="numMemb" class="form-control" style="display: none" type="text" name="numMemb" value="<?php echo($numMemb) ?>" readonly="readonly">
                 </div>
             </form>
