@@ -12,7 +12,7 @@ include '../../../header.php';
         <div class="col-md-12">
             <!--Form to create a new status-->
             <form action="<?php echo ROOT_URL . '/api/status/create.php' ?>" method="post">
-                <div class="form-group">
+            <div class="form-group">
                     <label for="libStat">Libellé du statut</label>
                     <input id="libStat" class="form-control" type="text" name="libStat" required minlength="1" maxlength="25">
                 </div>
