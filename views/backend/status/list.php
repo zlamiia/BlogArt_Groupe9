@@ -15,12 +15,12 @@ $statuses = sql_select("STATUT", "*");
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>Status</h1>
+            <h1>Statuts</h1>
             <table class="table table-striped">
                 <thead>
                     <tr>
                         <th>Id</th>
-                        <th>Name</th>
+                        <th>Libellé</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -30,8 +30,8 @@ $statuses = sql_select("STATUT", "*");
                             <td><?php echo $status['numStat']; ?></td>
                             <td><?php echo $status['libStat']; ?></td>
                             <td>
-                                <a href="update.php?numStat=<?php echo $status['numStat']; ?>" class="btn btn-primary">Edit</a>
-                                <a href="delete.php?numStat=<?php echo $status['numStat']; ?>" class="btn btn-danger">Delete</a>
+                                <a href="update.php?numStat=<?php echo $status['numStat']; ?>" class="btn btn-primary">Modifier</a>
+                                <a href="delete.php?numStat=<?php echo $status['numStat']; ?>" class="btn btn-danger">Supprimer</a>
                             </td>
                         </tr>
                     <?php } ?>

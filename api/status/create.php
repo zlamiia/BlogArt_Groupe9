@@ -2,8 +2,12 @@
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
 
-$libStat = $_POST['libStat'];
+$libStat = sql_escape($_POST['libStat']);
 
-sql_insert('STATUT', 'libStat', "'$libStat'");
+if ($libStat != ""){
+    sql_insert('STATUT', 'libStat', "'$libStat'");
+}
+
+// AFFICHAGE ERREUR SI JAMAIS CHAMPS VIDES A FAIRE
 
 header('Location: ../../views/backend/status/list.php');

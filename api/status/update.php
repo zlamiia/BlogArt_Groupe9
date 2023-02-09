@@ -2,9 +2,14 @@
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
 
-$numStat = $_POST['numStat'];
-$newLibStat = $_POST['libStat'];
+$numStat = sql_escape($_POST['numStat']);
+$newLibStat = sql_escape($_POST['libStat']);
 
-sql_update('STATUT',"libStat = '$newLibStat'","numStat = $numStat"); 
+
+if ($newLibStat != "" ){
+    sql_update('STATUT',"libStat = '$newLibStat'","numStat = $numStat"); 
+}
+
+// AFFICHAGE ERREUR SI JAMAIS CHAMPS VIDES A FAIRE
 
 header('Location: ../../views/backend/status/list.php');
