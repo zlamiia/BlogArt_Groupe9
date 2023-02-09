@@ -5,7 +5,7 @@ include '../../header.php';
 
 <!--Bootstrap admin dashboard template-->
 <div>
-    <div class="container">
+    <div class="container margin-dash">
         <div class="row">
             <div class="col-md-12">
                 <h1>BlogArt Admin Dashboard</h1>

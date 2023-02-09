@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Art</title>
     <!-- Load CSS -->
-    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="/src/css/stylephp.css">
     <!-- Bootstrap CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
@@ -18,7 +18,7 @@ require_once 'config.php';
 ?>
 <body>
 
-<nav class="navbar navbar-expand-lg bg-light">
+<!-- <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">BlogArt</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,12 +34,36 @@ require_once 'config.php';
         </li>
       </ul>
     </div>
-    <!--right align-->
+    -- right align --
     <div class="d-flex">
       <a class="btn btn-primary m-1" href="/views/backend/members/login.php" role="button">Login</a>
       <a class="btn btn-dark m-1" href="/views/backend/members/register.php" role="button">Register</a>
       <a class="btn btn-primary m-1" href="/views/backend/members/login.php" role="button">Mon compte</a>
     </div>
   </div>
-</nav>
+</nav> -->
+    <!-- Logo-->
+    <img class="logo" src="/src/images/Logo.svg" alt="">
+    <!-- Header + Cover -->
+    <!-- Header -->
+    <div class="header container">
+        <header class="row container text-center">                    
+            <div class="col header-content">
+                <a href="/">Home</a>
+            </div>
+            <div class="col header-content">
+                <a href="index-articlespost.php">Articles</a>
+            </div>
+            <div class="col header-content">
+                <a href="index-ecrire.php">Évènements</a>
+            </div>
+            <div class="col header-content">
+                <a href="/views/backend/dashboard.php">Admin</a>
+            </div>
+        </header>
+    </div>
+    <div class="search">
+        <p class="search"></p>
+    </div>
+    <div class="margin-dash"></div>
 
