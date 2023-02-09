@@ -20,7 +20,8 @@ $articles = sql_select("ARTICLE", "*");
                 <thead>
                     <tr>
                         <th>Num article</th>
-                        <th>Date création</th>
+                        <th>Date de création</th>
+                        <th>Titre</th>
                         <th>Chapô</th>
                         <th>Accroche</th>
                         <th>Paragraphe 1</th>
@@ -48,18 +49,19 @@ $articles = sql_select("ARTICLE", "*");
                             <td><?php echo $article['parag2Art']; ?></td>
                             <td><?php echo $article['libSsTitr2Art']; ?></td>
                             <td><?php echo $article['parag3Art']; ?></td>
-                            <!-- <td><?php echo $article['urlPhotArt']; ?></td> -->
+                            <td><?php echo $article['libConclArt']; ?></td>
+                            <!--balise php pour echo $article ['urlPhotArt'] -->
                             <td><?php echo $article['numThem']; ?></td>
 
                             <td>
-                                <a href="update.php?numArt=<?php echo $article['numArt']; ?>" class="btn btn-primary">Edit</a>
-                                <a href="delete.php?numArt=<?php echo $article['numArt']; ?>" class="btn btn-danger">Delete</a>
+                                <a href="update.php?numArt=<?php echo $article['numArt']; ?>" class="btn btn-primary">Modifier</a>
+                                <a href="delete.php?numArt=<?php echo $article['numArt']; ?>" class="btn btn-danger">Supprimer</a>
                             </td>
                         </tr>
                     <?php } ?>
                 </tbody>
             </table>
-            <a href="create.php" class="btn btn-success">Create</a>
+            <a href="create.php" class="btn btn-success">Créer</a>
         </div>
     </div>
 
