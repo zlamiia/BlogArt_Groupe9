@@ -16,11 +16,10 @@ $libConclArt = sql_escape($_POST['libConclArt']);
 $numThem = sql_escape($_POST ['numThem']);
 
 
-if ($dtCreArt != "" && $libTitrArt != "" && $libChapoArt != "" && $libAccrochArt != "" && $parag1Art != "" && $libSsTitr1Art != "" && $parag3Art != "" && $libConclArt != "" && $numThem != "") {
-    sql_insert('ARTICLE',
-    'dtCreArt, libTitrArt, libChapoArt, libAccrochArt, parag1Art, libSsTitr1Art, parag2Art, libSsTitr2Art, parag3Art, libConclArt, numThem',
-    "'$dtCreArt','$libTitrArt', '$libChapoArt', '$libAccrochArt', '$parag1Art', '$libSsTitr1Art', '$parag2Art', '$libSsTitr2Art', '$parag3Art', '$libConclArt', $numThem");
-}
+sql_insert('ARTICLE',
+'dtCreArt, libTitrArt, libChapoArt, libAccrochArt, parag1Art, libSsTitr1Art, parag2Art, libSsTitr2Art, parag3Art, libConclArt, numThem',
+"'$dtCreArt','$libTitrArt', '$libChapoArt', '$libAccrochArt', '$parag1Art', '$libSsTitr1Art', '$parag2Art', '$libSsTitr2Art', '$parag3Art', '$libConclArt', $numThem");
+
 
 // AFFICHAGE ERREUR SI JAMAIS CHAMPS VIDES A FAIRE
 

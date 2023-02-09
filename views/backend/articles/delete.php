@@ -1,6 +1,10 @@
 <?php
 include '../../../header.php';
 
+
+$thematiques = sql_select("THEMATIQUE", "*");
+
+
 $numArt = $_GET ["numArt"];
 $dtCreArt = sql_select("ARTICLE", "dtCreArt", "numArt = $numArt")[0]['dtCreArt'];
 $libTitrArt = sql_select("ARTICLE", "libTitrArt", "numArt = $numArt")[0]['libTitrArt'];
@@ -14,8 +18,6 @@ $parag3Art = sql_select("ARTICLE", "parag3Art", "numArt = $numArt")[0]['parag3Ar
 $libConclArt = sql_select("ARTICLE", "libConclArt", "numArt = $numArt")[0]['libConclArt'];
 $urlPhotArt = sql_select("ARTICLE", "urlPhotArt", "numArt = $numArt")[0]['urlPhotArt'];
 $numThem = sql_select("ARTICLE", "numThem", "numArt = $numArt")[0]['numThem'];
-
-
 
 ?>
 
@@ -76,7 +78,7 @@ $numThem = sql_select("ARTICLE", "numThem", "numArt = $numArt")[0]['numThem'];
                 </div>
                 -->
                 <div class="form-group">
-                    <label for="numThem">Num them</label>
+                    <label for="numThem">Thématique</label>
                     <input id="numThem" class="form-control" type="number" name="numThem" value="<?php echo($numThem) ?>" readonly="readonly">
                 </div>
                 <div class="form-group mt-2">

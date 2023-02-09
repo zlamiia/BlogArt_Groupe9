@@ -17,20 +17,18 @@ $newlibConclArt = sql_escape($_POST['libConclArt']);
 $newnumThem =sql_escape($_POST ['numThem']);
 
 
+sql_update('ARTICLE',"dtCreArt = '$newdtCreArt'","numArt = $numArt");
+sql_update('ARTICLE',"libTitrArt = '$newlibTitrArt'","numArt = $numArt");
+sql_update('ARTICLE',"libChapoArt = '$newlibChapoArt'","numArt = $numArt");
+sql_update('ARTICLE',"libAccrochArt = '$newlibAccrochArt'","numArt = $numArt");
+sql_update('ARTICLE',"parag1Art = '$newparag1Art'","numArt = $numArt");
+sql_update('ARTICLE',"libSsTitr1Art = '$newlibSsTitr1Art'","numArt = $numArt");
+sql_update('ARTICLE',"parag2Art = '$newparag2Art'","numArt = $numArt");
+sql_update('ARTICLE',"libSsTitr2Art = '$newlibSsTitr2Art'","numArt = $numArt"); 
+sql_update('ARTICLE',"parag3Art = '$newparag3Art'","numArt = $numArt");
+sql_update('ARTICLE',"libConclArt = '$newlibConclArt'","numArt = $numArt");
+sql_update('ARTICLE',"numThem = '$newnumThem'","numArt = $numArt");
 
-if ($newdtCreArt != "" && $newlibTitrArt != "" && $newlibChapoArt != "" && $newlibAccrochArt != "" && $newparag1Art != "" && $newlibSsTitr1Art != "" && $newparag3Art != "" && $newlibConclArt != "" && $newnumThem != "") {
-    sql_update('ARTICLE',"dtCreArt = '$newdtCreArt'","numArt = $numArt");
-    sql_update('ARTICLE',"libTitrArt = '$newlibTitrArt'","numArt = $numArt");
-    sql_update('ARTICLE',"libChapoArt = '$newlibChapoArt'","numArt = $numArt");
-    sql_update('ARTICLE',"libAccrochArt = '$newlibAccrochArt'","numArt = $numArt");
-    sql_update('ARTICLE',"parag1Art = '$newparag1Art'","numArt = $numArt");
-    sql_update('ARTICLE',"libSsTitr1Art = '$newlibSsTitr1Art'","numArt = $numArt");
-    sql_update('ARTICLE',"parag2Art = '$newparag2Art'","numArt = $numArt");
-    sql_update('ARTICLE',"libSsTitr2Art = '$newlibSsTitr2Art'","numArt = $numArt"); 
-    sql_update('ARTICLE',"parag3Art = '$newparag3Art'","numArt = $numArt");
-    sql_update('ARTICLE',"libConclArt = '$newlibConclArt'","numArt = $numArt");
-    sql_update('ARTICLE',"numThem = '$newnumThem'","numArt = $numArt");
-}
 
 
 // AFFICHAGE ERREUR SI JAMAIS CHAMPS VIDES A FAIRE

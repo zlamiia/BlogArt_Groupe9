@@ -8,6 +8,10 @@ include '../../../header.php';
     exit();
 } */
 
+
+$thematiques = sql_select("THEMATIQUE", "*");
+
+
 $numArt = $_GET["numArt"];
 $dtCreArt = sql_select("ARTICLE", "dtCreArt", "numArt = $numArt")[0]['dtCreArt'];
 $libTitrArt = sql_select("ARTICLE", "libTitrArt", "numArt = $numArt")[0]['libTitrArt'];
@@ -84,9 +88,12 @@ $numThem = sql_select("ARTICLE", "numThem", "numArt = $numArt")[0]['numThem'];
                     <textarea id="libConclArt" class="form-control" type="text" name="libConclArt" required minlength="1"><?php echo($libConclArt) ?></textarea>
                 </div>
                 <div class="form-group">
-                    <label for="numThem">Num thématique entre 1 et 4</label>
-                    <input id="numArt" class="form-control" style="display: none" type="text" name="numArt" value="<?php echo($numArt) ?>"> 
-                    <input id="numThem" class="form-control" type="number" name="numThem" value="<?php echo($numThem) ?>" required min="1" max="4" >
+                <label for="numThem">Thématique</label>
+                <select class="form-select" name="numThem">
+                    <?php foreach ($thematiques as $thematique) { ?>
+                        <option value="<?php echo $thematique['numThem']; ?>"><?php echo $thematique['libThem']; ?></option>
+                    <?php } ?>
+                </select>
                 </div>
 
                 <div class="form-group mt-2">

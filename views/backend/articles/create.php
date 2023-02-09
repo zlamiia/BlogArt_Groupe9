@@ -1,6 +1,7 @@
 <?php
 include '../../../header.php';
 
+$thematiques = sql_select("THEMATIQUE", "*");
 ?>
 
 <!--Bootstrap form to create a new article-->
@@ -60,10 +61,16 @@ include '../../../header.php';
                     <input id="urlPhotArt" class="form-control" type="text" name="urlPhotArt">
                 </div>
                 -->
+
                 <div class="form-group">
-                    <label for="numThem">Numéro thématique : entre 1 et 4</label>
-                    <input id="numThem" class="form-control" type="number" name="numThem" required min="1" max="4">
+                <label for="numThem">Thématique</label>
+                <select class="form-select" name="numThem">
+                    <?php foreach ($thematiques as $thematique) { ?>
+                        <option value="<?php echo $thematique['numThem']; ?>"><?php echo $thematique['libThem']; ?></option>
+                    <?php } ?>
+                </select>
                 </div>
+
                 <div class="form-group mt-2">
                     <button type="submit" class="btn btn-primary">Créer</button>
                 </div>

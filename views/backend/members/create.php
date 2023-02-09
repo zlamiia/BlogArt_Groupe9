@@ -1,6 +1,9 @@
 <?php
 include '../../../header.php';
 
+
+$statuts = sql_select("STATUT", "*");
+
 ?>
 
 <!--Bootstrap form to create a member-->
@@ -32,10 +35,13 @@ include '../../../header.php';
                     <label for="passMemb">Mot de passe</label>
                     <input id="passMemb" class="form-control" type="password" name="passMemb" minlength="1" maxlength="70" required>
                 </div>
-                <!-- MVP : Faire une liste pour pouvoir choisir les numStat -->
                 <div class="form-group">
-                    <label for="numStat">Numéro statut</label>
-                    <input id="numStat" class="form-control" type="number" name="numStat">
+                <label for="numArt">Statut</label>
+                <select class="form-select" name="numArt">
+                    <?php foreach ($statuts as $statut) { ?>
+                        <option value="<?php echo $statut['numStat']; ?>"><?php echo $statut['libStat']; ?></option>
+                    <?php } ?>
+                </select>
                 </div>
                 <div class="form-group mt-2">
                     <button type="submit" class="btn btn-primary">Créer</button>

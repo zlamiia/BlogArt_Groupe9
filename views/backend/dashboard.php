@@ -59,24 +59,24 @@ include '../../header.php';
                         <tr>
                             <td>Comments</td>
                             <td>
-                                <a href="/views/backend/comments/list.php" class="btn btn-primary">Liste</a>
-                                <a href="/views/backend/comments/create.php" class="btn btn-success">Créer</a>
+                                <a href="/views/backend/comments/list.php" class="btn btn-primary disabled">Liste</a>
+                                <a href="/views/backend/comments/create.php" class="btn btn-success disabled">Créer</a>
                             </td>
                             <td></td>
                         </tr>
                         <tr>
                             <td>Likes</td>
                             <td>
-                                <a href="/views/backend/likes/list.php" class="btn btn-primary disabled">Liste</a>
-                                <a href="/views/backend/likes/create.php" class="btn btn-success disabled">Créer</a>
+                                <a href="/views/backend/likes/list.php" class="btn btn-primary">Liste</a>
+                                <a href="/views/backend/likes/create.php" class="btn btn-success">Créer</a>
                             </td>
                             <td>Utilisation de Ajax si trop de temps ;)</td>
                         </tr>
                         <tr>
                             <td>Keywords</td>
                             <td>
-                                <a href="/views/backend/keywords/list.php" class="btn btn-primary">Liste</a>
-                                <a href="/views/backend/keywords/create.php" class="btn btn-success">Créer</a>
+                                <a href="/views/backend/keywords/list.php" class="btn btn-primary disabled">Liste</a>
+                                <a href="/views/backend/keywords/create.php" class="btn btn-success disabled">Créer</a>
                             </td>
                             <td></td>
                         </tr>
