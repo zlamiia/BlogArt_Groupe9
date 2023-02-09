@@ -10,38 +10,88 @@ sql_connect();
         <img src="/src/images/Articles-title.svg" alt="">
         <h1 class="subtitle">Retrouvez l’univers et les dernières nouveautés de l’art digital</h1>
         <!-- Container Articles -->
-        <div class="container articles-home-content">
-            <!-- 1er article image et texte  -->
-            <div class="row articles-home-1">
-                <div class="col-8 articles-home-img_box-1">
 
-                </div>
-                <div class="col articles-home-text-1">
+        <?php
+            $articles = sql_select('article', 'numArt, dtCreArt, libTitrArt, libChapoArt, libAccrochArt, parag1Art, libSsTitr1Art, parag2Art, libSsTitr2Art, parag3Art, libConclArt, urlPhotArt, numThem');
+            $idArt = 0;
                     
+        ?>
+        <div class="articles">
+            <?php 
+                foreach($articles as $key => $article){
+            ?>
+            <a href="index-articlespost.php?idArt=<?php echo $article['numArt']; ?>">
+                <div class="articles-info">
+                    <div class="articles-img_box-home">
+
+                    </div>
+                    <div class="articles-text-home">
+                        <p>
+                            <?php
+                                echo $article['dtCreArt'];
+                            ?>
+                        </p>
+                        <h4>
+                            <?php
+                                echo $article['libTitrArt'];
+                            ?>
+                        </h4>
+                        <p>
+                            <?php
+                                echo $article['libChapoArt'];
+                            ?>
+                        </p>
+                    </div>
                 </div>
+                <?php 
+                    }
+                ?>
+            </a>
+            
+        </div>
+        <!-- 1er article image et texte 
+        <div class="row articles-home-1">
+            <div class="col-8 articles-home-img_box-1">
+
+            </div>
+            <div class="col articles-home-text-1">
+                <p>
+                    <?php 
+        
+                    ?>
+                </p>
             </div>
         </div>
-        <!-- 2eme et 3eme articles image  -->
+        
+        !-- 2eme et 3eme articles image  --
         <div class="row articles-2-3-img">
             <div class="col articles-img_box-2">
 
             </div>
-            <div class="col-1 space-articles-2-3"></div> <!-- Espacement entre les deux div -->
+            <div class="col-1 space-articles-2-3"></div> !-- Espacement entre les deux div --
             <div class="col articles-img_box-3">
                 
             </div>
         </div>
-        <!-- 2eme et 3eme articles texte  -->
+        !-- 2eme et 3eme articles texte  --
         <div class="row articles-2-3-text">
 
             <div class="col articles-text-2">
-
+                <p>
+                    <?php 
+                    
+                    ?>
+                </p>
             </div>
-            <div class="col-1 space-articles-2-3"></div> <!-- Espacement entre les deux div -->
+            <div class="col-1 space-articles-2-3"></div> !-- Espacement entre les deux div --
             <div class="col articles-text-3">
-                
+                <p>
+                    <?php 
+                    
+                    ?>
+                </p>      
             </div>
-        </div>
+        </div> -->
     </div>
     <!-- Evenements Homepage  -->
     <div class="container-fluid home-content">

@@ -52,10 +52,10 @@ require_once 'config.php';
                 <a href="/">Home</a>
             </div>
             <div class="col header-content">
-                <a href="index-articlespost.php">Articles</a>
+                <a href="/../../index-articles.php">Articles</a>
             </div>
             <div class="col header-content">
-                <a href="index-ecrire.php">Évènements</a>
+                <a href="">Évènements</a>
             </div>
             <div class="col header-content">
                 <a href="/views/backend/dashboard.php">Admin</a>
@@ -63,7 +63,10 @@ require_once 'config.php';
         </header>
     </div>
     <div class="search">
-        <p class="search"></p>
+
+    </div>
+    <div class="account-login">
+      <a href="index-connection.php">log</a>
     </div>
     <div class="margin-dash"></div>
 
