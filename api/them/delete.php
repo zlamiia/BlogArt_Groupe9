@@ -2,7 +2,7 @@
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
 
-$numThem = $_POST['numThem'];
+$numThem = sql_escape($_POST['numThem']);
 
 sql_delete('THEMATIQUE',"numThem = $numThem");
 

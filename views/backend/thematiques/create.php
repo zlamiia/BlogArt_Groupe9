@@ -13,15 +13,11 @@ include '../../../header.php';
             <!--Form to create a thematic -->
             <form action="<?php echo ROOT_URL . '/api/them/create.php' ?>" method="post">
                 <div class="form-group">
-                    <label for="numThem">Numéro thématique</label>
-                    <input id="numThem" class="form-control" type="text" name="numThem" readonly="readonly">
-                </div>
-                <div class="form-group">
                     <label for="libThem">Libellé de la thématique</label>
-                    <input id="libThem" class="form-control" type="text" name="libThem">
+                    <input id="libThem" class="form-control" type="text" name="libThem"required  minlength="1" maxlength="60">
                 </div>
                 <div class="form-group mt-2">
-                    <button type="submit" class="btn btn-primary">Créer un compte</button>
+                    <button type="submit" class="btn btn-primary">Créer</button>
                 </div>
             </form>
         </div>

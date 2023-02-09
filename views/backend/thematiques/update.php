@@ -26,7 +26,7 @@ $libThem = sql_select("THEMATIQUE", "libThem", "numThem = $numThem")[0]['libThem
                 <div class="form-group">
                     <label for="libThem">Libellé thématique</label>
                     <input id="numThem" class="form-control" style="display: none" type="text" name="numThem" value="<?php echo($numThem) ?>">
-                    <input id="libThem" class="form-control" type="text" name="libThem" value="<?php echo($libThem) ?>">
+                    <input id="libThem" class="form-control" type="text" name="libThem" value="<?php echo($libThem) ?>" required minlength="1" maxlength="60">
                 </div>
                 <div class="form-group mt-2">
                     <button type="submit" class="btn btn-primary">Modifier</button>
