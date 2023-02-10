@@ -1,6 +1,6 @@
 <?php
 
-require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
+require_once __DIR__ . '/../../config.php';
 
 $numStat = sql_escape($_POST['numStat']);
 $newLibStat = sql_escape($_POST['libStat']);

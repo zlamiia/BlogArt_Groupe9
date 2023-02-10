@@ -9,16 +9,56 @@ sql_connect();
         <img src="/src/images/Articles-title.svg" alt="">
         <h1 class="subtitle">Retrouvez l’univers et les dernières nouveautés de l’art digital</h1>
         <!-- Articles -->
-        <div class="container text-center">
-            <div class="row row-cols-2">
-                <div class="col-5 articles-img_box-2"></div>
-                <div class="col-2 space-articles"></div> <!-- Espacement entre les deux div -->
-                <div class="col-5 articles-img_box-2"></div>
-                <div class="col-5 articles-text-2"></div>
-                <div class="col-2 space-articles"></div> <!-- Espacement entre les deux div -->
-                <div class="col-5 articles-text-2"></div>
-            </div>
+        <?php
+            $articles = sql_select('article', 'numArt, dtCreArt, libTitrArt, libChapoArt, libAccrochArt, parag1Art, libSsTitr1Art, parag2Art, libSsTitr2Art, parag3Art, libConclArt, urlPhotArt, numThem');
+            $thems = sql_select('thematique', 'numThem, libThem');
+            $idArt = 0;
+            $idThem = 0;
+                    
+        ?>
+        <div class="articles">
+            <?php 
+                foreach($articles as $key => $article){
+            ?>
+            <a href="index-articlespost.php?idArt=<?php echo $article['numArt']; ?>">
+                <div class="articles-info">
+                    <div class="articles-img_box">
+                        <img class="articles-img_box img-shadow" src="/src/images/<?php echo $article['urlPhotArt']?>" alt="">
+                    </div>
+                    <div class="articles-text">
+                        <p>
+                            <?php
+                                echo $article['dtCreArt'];
+                            ?>
+                        </p>
+                        <p>
+                            <?php
+                                $idThem = $article['numThem'];
+                                foreach($thems as $key => $them){
+                                    if($idThem == $them['numThem']){
+                                        echo $them['libThem'];
+                                    }
+                                }
+                            ?>
+                        </p>
+                        <h4>
+                            <?php
+                                echo $article['libTitrArt'];
+                            ?>
+                        </h4>
+                        <p>
+                            <?php
+                                echo $article['libChapoArt'];
+                            ?>
+                        </p>
+                    </div>
+                </div>
+                <?php 
+                    }
+                ?>
+            </a>
+            
         </div>
-    </div>
+</div>
 
 <?php require_once 'footer.php'; ?>
