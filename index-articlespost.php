@@ -4,6 +4,8 @@ sql_connect();
 // print_r(curl("https://reqres.in/api/users", "POST", '{"name": "morpheus", "job": "leader"}'));
 $idArt = $_GET["idArt"];
 $articles = sql_select('article', 'numArt, dtCreArt, libTitrArt, libChapoArt, libAccrochArt, parag1Art, libSsTitr1Art, parag2Art, libSsTitr2Art, parag3Art, libConclArt, urlPhotArt, numThem', "numArt = $idArt");
+$thems = sql_select('thematique', 'numThem, libThem');
+$idThem = 0;
 
 foreach($articles as $key => $article){   
 ?>
@@ -12,11 +14,22 @@ foreach($articles as $key => $article){
 <div class="container-fluid articlepost">
 
         <div class="container title-content">
-            
-            <h1 class="title">
+            <p>
+                <?php echo $article['dtCreArt'] ?>
+            </p> 
+            <p>
+                <?php
+                    $idThem = $article['numThem'];
+                    foreach($thems as $key => $them){
+                        if($idThem == $them['numThem']){
+                            echo $them['libThem'];
+                        }
+                    }
+                ?>
+            </p>
+            <h1>
                 <?php echo $article['libTitrArt']; ?>
             </h1>
-    
         </div>
         <div class="container chapo-content">
             <h2>
@@ -24,9 +37,7 @@ foreach($articles as $key => $article){
             </h2>
         </div>
         <div class="container img-content">
-            <p>
-                <?php echo $article['urlPhotArt']; ?>
-            </p>
+            <img class="img-box img-shadow" src="/src/images/<?php echo $article['urlPhotArt']?>" alt="">
         </div>
         <div class="container accroche-content">
             <p>
@@ -99,12 +110,22 @@ foreach($articles as $key => $article){
             <a href="index-articlespost.php?idArt=<?php echo $article['numArt']; ?>">
                 <div class="articles-info">
                     <div class="articles-img_box-autres">
-
+                        <img class="articles-img_box-autres img-shadow" src="/src/images/<?php echo $article['urlPhotArt']?>" alt="">
                     </div>
                     <div class="articles-text-autres">
                         <p>
                             <?php
                                 echo $article['dtCreArt'];
+                            ?>
+                        </p>
+                        <p>
+                            <?php
+                                $idThem = $article['numThem'];
+                                foreach($thems as $key => $them){
+                                    if($idThem == $them['numThem']){
+                                        echo $them['libThem'];
+                                    }
+                                }
                             ?>
                         </p>
                         <h4>

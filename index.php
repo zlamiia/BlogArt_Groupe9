@@ -1,4 +1,8 @@
-<?php require_once 'header.php'; 
+<?php 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL & ~E_NOTICE);
+require_once 'header.php'; 
 sql_connect();
 
 // print_r(curl("https://reqres.in/api/users", "POST", '{"name": "morpheus", "job": "leader"}'));
@@ -7,13 +11,15 @@ sql_connect();
 <img class="container-fluid cover" src="/src/images/Cover.svg" alt="">
     <!-- Articles Homepage -->
     <div class="container-fluid title-content">
-        <img src="/src/images/Articles-title.svg" alt="">
+        <img class="title-img"src="/src/images/Articles-title.svg" alt="">
         <h1 class="subtitle">Retrouvez l’univers et les dernières nouveautés de l’art digital</h1>
         <!-- Container Articles -->
 
         <?php
             $articles = sql_select('article', 'numArt, dtCreArt, libTitrArt, libChapoArt, libAccrochArt, parag1Art, libSsTitr1Art, parag2Art, libSsTitr2Art, parag3Art, libConclArt, urlPhotArt, numThem');
+            $thems = sql_select('thematique', 'numThem, libThem');
             $idArt = 0;
+            $idThem = 0;
                     
         ?>
         <div class="articles">
@@ -23,12 +29,22 @@ sql_connect();
             <a href="index-articlespost.php?idArt=<?php echo $article['numArt']; ?>">
                 <div class="articles-info">
                     <div class="articles-img_box-home">
-
+                        <img class="articles-img_box-home img-shadow" src="/src/images/<?php echo $article['urlPhotArt']?>" alt="">
                     </div>
                     <div class="articles-text-home">
                         <p>
                             <?php
                                 echo $article['dtCreArt'];
+                            ?>
+                        </p>
+                        <p>
+                            <?php
+                                $idThem = $article['numThem'];
+                                foreach($thems as $key => $them){
+                                    if($idThem == $them['numThem']){
+                                        echo $them['libThem'];
+                                    }
+                                }
                             ?>
                         </p>
                         <h4>
@@ -135,5 +151,5 @@ sql_connect();
             </svg> <!-- On a utilisé des paths svg car on peut facilement manipuler le contenu à l'interieure et le svg est mieux integre dans le site -->
         </div>      <!-- sans compter qu'il nous donne la possible de realiser des animations interessante plustard -->
     </div>
-
+<?php require_once 'cookies.php'; ?>
 <?php require_once 'footer.php'; ?>

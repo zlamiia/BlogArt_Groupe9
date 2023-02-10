@@ -6,6 +6,8 @@
     <title>Blog Art</title>
     <!-- Load CSS -->
     <link rel="stylesheet" href="/src/css/stylephp.css">
+    <link rel="stylesheet" href="/src/fonts/fonts.css">
+    <link rel="stylesheet" href="/src/css/cookies.css">
     <!-- Bootstrap CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
@@ -44,10 +46,12 @@ require_once 'config.php';
 </nav> -->
     <!-- Logo-->
     <img class="logo" src="/src/images/Logo.svg" alt="">
+    <img class="menu-burger"src="/src/images/menu-burger.svg" alt="">
     <!-- Header + Cover -->
     <!-- Header -->
     <div class="header container">
-        <header class="row container text-center">                    
+        <header class="row container text-center"> 
+            <img src="/src/images/menu-burger.svg" alt="">                   
             <div class="col header-content">
                 <a href="/">Home</a>
             </div>
@@ -65,8 +69,10 @@ require_once 'config.php';
     <div class="search">
 
     </div>
-    <div class="account-login">
-      <a href="index-connection.php">log</a>
-    </div>
+    <a href="index-connection.php">
+      <div class="account-login">
+          <img class="user-account" src="/src/images/User.svg" alt="">
+      </div>
+    </a>
     <div class="margin-dash"></div>
 
