@@ -1,6 +1,10 @@
 <?php
 include '../../../header.php';
 
+
+$articles = sql_select("ARTICLE", "*");
+$membres = sql_select("MEMBRE", "*");
+
 ?>
 
 <!--Bootstrap form to create a new comment-->
@@ -14,44 +18,45 @@ include '../../../header.php';
             <form action="<?php echo ROOT_URL . '/api/comments/create.php' ?>" method="post">
                 <div class="form-group">
                     <label for="numCom">Numéro commentaire</label>
-                    <input id="numCom" class="form-control" type="text" name="numCom" readonly="readonly">
+                    <input id="numCom" class="form-control" type="number" name="numCom" readonly="readonly">
                 </div>
+                <!-- date automatique -->
                 <div class="form-group">
                     <label for="dtCreCom">Date création commentaire</label>
-                    <input id="dtCreCom" class="form-control" type="text" name="dtCreCom">
+                    <input id="dtCreCom" class="form-control" type="date" name="dtCreCom" readonly="readonly">
                 </div>
                 <div class="form-group">
                     <label for="libCom">Libellé commentaire</label>
                     <input id="libCom" class="form-control" type="text" name="libCom">
                 </div>
-                <!-- JE NE COMPRENDS PAS
                 <div class="form-group">
                     <label for="attModOK">attModOK</label>
-                    <input id="attModOK" class="form-control" type="text" name="attModOK">
+                    <input id="attModOK" class="form-control" type="text" name="attModOK" readonly = "readonly">
                 </div>
-                -->
-                <div class="form-group">
-                    <label for="dtModCom">Date modification commentaire</label>
-                    <input id="dtModCom" class="form-control" type="text" name="dtModCom">
-                </div>
-                <!-- JE NE COMPRENDS PAS
                 <div class="form-group">
                     <label for="notifComKOAff">Notif commentaire KO Aff</label>
                     <input id="notifComKOAff" class="form-control" type="text" name="notifComKOAff">
                 </div>
-            
                 <div class="form-group">
                     <label for="delLogiq">delLogiq</label>
-                    <input id="delLogiq" class="form-control" type="text" name="delLogiq">
-                </div>
-                -->
-                <div class="form-group">
-                    <label for="numArt">Numéro article</label>
-                    <input id="numArt" class="form-control" type="text" name="numArt">
+                    <input id="delLogiq" class="form-control" type="text" name="delLogiq" readonly = "readonly">
                 </div>
                 <div class="form-group">
-                    <label for="numMemb">Numéro membre</label>
-                    <input id="numMemb" class="form-control" type="text" name="numMemb">
+                <label for="numArt">Article</label>
+                <select class="form-select" name="numArt">
+                    <?php foreach ($articles as $article) { ?>
+                        <option value="<?php echo $article['numArt']; ?>"><?php echo $article['libTitrArt']; ?></option>
+                    <?php } ?>
+                </select>
+                </div>
+
+                <div class="form-group">
+                <label for="numMemb">Membre</label>
+                <select class="form-select" name="numMemb">
+                    <?php foreach ($membres as $membre) { ?>
+                        <option value="<?php echo $membre['numMemb']; ?>"><?php echo $membre['pseudoMemb']; ?></option>
+                    <?php } ?>
+                </select>
                 </div>
                 <div class="form-group mt-2">
                     <button type="submit" class="btn btn-primary">Créer</button>

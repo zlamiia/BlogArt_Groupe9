@@ -15,12 +15,15 @@ $libConclArt = sql_escape($_POST['libConclArt']);
 // $urlPhotArt = sql_escape($_POST ['urlPhotArt']); Gérer le nom de l'URL
 $numThem = sql_escape($_POST ['numThem']);
 
+// insérer le $path dans la DB lors du sql_insert()
+
+/*if(isset($_FILES)) {
+    $path = upload_image($_FILES);
+}*/
 
 sql_insert('ARTICLE',
 'dtCreArt, libTitrArt, libChapoArt, libAccrochArt, parag1Art, libSsTitr1Art, parag2Art, libSsTitr2Art, parag3Art, libConclArt, numThem',
 "'$dtCreArt','$libTitrArt', '$libChapoArt', '$libAccrochArt', '$parag1Art', '$libSsTitr1Art', '$parag2Art', '$libSsTitr2Art', '$parag3Art', '$libConclArt', $numThem");
 
-
-// AFFICHAGE ERREUR SI JAMAIS CHAMPS VIDES A FAIRE
 
 header('Location: ../../views/backend/articles/list.php');

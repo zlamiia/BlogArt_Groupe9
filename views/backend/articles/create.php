@@ -72,9 +72,16 @@ $thematiques = sql_select("THEMATIQUE", "*");
                 </div>
 
                 <div class="form-group mt-2">
-                    <button type="submit" class="btn btn-primary">Créer</button>
-                </div>
+                <button type="submit" class="btn btn-primary">Créer</button>
+            </div>
             </form>
+
+            <!-- A mettre dans update et delete 
+            <form action="" method="post" enctype='multipart/form-data'>
+            <input type="file" name="file" id="file">
+            <input type="submit" value="Télécharger">
+            </form>
+            -->
         </div>
     </div>
 </div>

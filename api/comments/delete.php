@@ -2,7 +2,7 @@
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
 
-$numCom = $_POST['numCom'];
+$numCom = sql_escape($_POST['numCom']);
 
 sql_delete('COMMENT',"numCom = $numCom");
 

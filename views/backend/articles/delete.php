@@ -2,9 +2,6 @@
 include '../../../header.php';
 
 
-$thematiques = sql_select("THEMATIQUE", "*");
-
-
 $numArt = $_GET ["numArt"];
 $dtCreArt = sql_select("ARTICLE", "dtCreArt", "numArt = $numArt")[0]['dtCreArt'];
 $libTitrArt = sql_select("ARTICLE", "libTitrArt", "numArt = $numArt")[0]['libTitrArt'];
@@ -29,6 +26,7 @@ $numThem = sql_select("ARTICLE", "numThem", "numArt = $numArt")[0]['numThem'];
         </div>
         <div class="col-md-12">
             <!--Form to delete an article -->
+
             <form action="<?php echo ROOT_URL . '/api/articles/delete.php' ?>" method="post">
                 <div class="form-group">
                     <label for="dtCreArt">Date et heure de création de l'article</label>

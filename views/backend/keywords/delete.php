@@ -22,11 +22,11 @@ $libMotCle = sql_select("MOTCLE", "libMotCle", "numMotCle = $numMotCle")[0]['lib
             <form action="<?php echo ROOT_URL . '/api/keywords/delete.php' ?>" method="post">
             <div class="form-group">
                     <label for="numMotCle">Numéro mot clé</label>
-                    <input id="numMotCle" class="form-control" type="text" name="numMotCle" value="<?php echo($numMotCle) ?>" readonly="readonly">
+                    <input id="numMotCle" class="form-control" type="number" name="numMotCle" value="<?php echo($numMotCle) ?>" readonly="readonly">
                 </div>    
             <div class="form-group">
                     <label for="libMotCle">Libellé mot clé</label>
-                    <input id="numMotCle" class="form-control" style="display: none" type="text" name="numMotCle" value="<?php echo($numMotCle) ?>" readonly="readonly">
+                    <input id="numMotCle" class="form-control" style="display: none" type="text" name="numMotCle" readonly="readonly">
                     <input id="libMotCle" class="form-control" type="text" name="libMotCle" value="<?php echo($libMotCle) ?>" readonly="readonly">
                 </div>
                 <div class="form-group mt-2">

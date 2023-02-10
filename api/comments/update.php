@@ -3,15 +3,15 @@
 require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
 
 
-$numCom = $_POST['numCom'];
-$newdtCreCom = $_POST['dtCreCom'];
-$newlibCom = $_POST['libCom'];
-//$newattModOK = $_POST['attModOK'];
-$newdtModCom = $_POST['dtModCom'];
-//$newnotifComKOAff = $_POST['notifComKOAff'];
-//$newdelLogiq = $_POST['delLogiq'];
-$newnumArt = $_POST['numArt'];
-$newnumMemb = $_POST['numMemb'];
+$numCom = sql_escape($_POST['numCom']);
+$newdtCreCom = sql_escape($_POST['dtCreCom']);
+$newlibCom = sql_escape($_POST['libCom']);
+//$newattModOK = sql_escape($_POST['attModOK']);
+$newdtModCom = sql_escape($_POST['dtModCom']);
+//$newnotifComKOAff = sql_escape($_POST['notifComKOAff']);
+//$newdelLogiq = sql_escape($_POST['delLogiq']);
+$newnumArt = sql_escape($_POST['numArt']);
+$newnumMemb = sql_escape($_POST['numMemb']);
 
 
 sql_update('COMMENT',"dtCreCom = '$newdtCreCom'","numCom = $numCom");

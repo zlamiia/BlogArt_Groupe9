@@ -7,8 +7,7 @@ include '../../../header.php';
     exit();
 } */
 $numMemb = $_GET["numMemb"];
-
-
+$numArt = $_GET["numArt"];
 ?>
 
 <!--Bootstrap form to delete a like -->
@@ -22,9 +21,10 @@ $numMemb = $_GET["numMemb"];
             <form action="<?php echo ROOT_URL . '/api/likes/delete.php' ?>" method="post">
                 <div class="form-group">
                     <label for="numMemb">Num membre</label>
-                    <input id="numMemb" class="form-control" style="display: none" type="text" name="numMemb" value="<?php echo($numMemb) ?>" readonly="readonly">
+                    <input id="numArt" class="form-control" style="display: none" type="number" name="numArt" value="<?php echo($numArt) ?>" readonly="readonly">
                     <input id="numMemb" class="form-control" type="text" name="numMemb" value="<?php echo($numMemb) ?>" readonly="readonly">
                 </div>
+                
                 <div class="form-group mt-2">
                     <button type="submit" class="btn btn-danger">Confirmer la suppression ?</button>
                 </div>
