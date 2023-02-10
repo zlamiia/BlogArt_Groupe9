@@ -8,9 +8,7 @@ include '../../../header.php'; // contains the header and call to config.php
 } */
 
 
-$likes = sql_select("LIKEART", "*");
-$articles = sql_select("ARTICLE", "*");
-$membres = sql_select("MEMBRE", "*");
+$likes = sql_select("LIKEART INNER JOIN ARTICLE ON LIKEART.numArt = ARTICLE.numArt", "*");
 
 
 ?>
@@ -25,6 +23,8 @@ $membres = sql_select("MEMBRE", "*");
                     <tr>
                         <th>Num membre</th>
                         <th>Num article</th>
+                        <th>Titre article</th>
+                        <th>Like</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -33,9 +33,11 @@ $membres = sql_select("MEMBRE", "*");
                         <tr>
                             <td><?php echo $like['numMemb']; ?></td>
                             <td><?php echo $like['numArt']; ?></td>
+                            <td><?php echo $like['libTitrArt']; ?></td>
+                            <td><?php echo $like['likeA']; ?></td>
                             <td>
-                                <a href="update.php?numMemb=<?php echo $like['numMemb']; ?>" class="btn btn-primary">Modifier</a>
-                                <a href="delete.php?numMemb=<?php echo $like['numMemb']; ?>" class="btn btn-danger">Supprimer</a>
+                                <a href="update.php?numMemb=<?php echo $like['numMemb']; ?>&numArt=<?php echo $like['numArt']; ?>" class="btn btn-primary">Modifier</a>
+                                <a href="delete.php?numMemb=<?php echo $like['numMemb']; ?>&numArt=<?php echo $like['numArt']; ?>" class="btn btn-danger">Supprimer</a>
                             </td>
                         </tr>
                     <?php } ?>

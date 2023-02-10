@@ -19,6 +19,9 @@ $libThem = sql_select("THEMATIQUE", "libThem", "numThem = $numThem")[0]['libThem
         </div>
         <div class="col-md-12">
             <!--Form to delete a thematic-->
+            <?php if(isset($_GET["error"])){
+                echo "<p>Vous ne pouvez pas supprimer une thématique liée à des articles.</p>";
+            } ?>
             <form action="<?php echo ROOT_URL . '/api/them/delete.php' ?>" method="post">
                 <div class="form-group">
                     <label for="libThem">Libellé thématique</label>

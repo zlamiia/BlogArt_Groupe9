@@ -2,7 +2,7 @@
 
 require_once __DIR__ . '/../../config.php';
 
-$libMotCle = $_POST['libMotCle'];
+$libMotCle = sql_escape($_POST['libMotCle']);
 
 sql_insert('MOTCLE', 'libMotCle', "'$libMotCle'");
 

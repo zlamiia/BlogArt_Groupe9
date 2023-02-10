@@ -2,20 +2,17 @@
 
 require_once __DIR__ . '/../../config.php';;
 
-$numCom = $_POST['numCom'];
-$dtCreCom = $_POST['dtCreCom'];
-$libCom = $_POST['libCom'];
-//$attModOK = $_POST ['attModOK'];
-//$dtModCom = $_POST['dtModCom'];
-//$notifComKOAff = $_POST['notifComKOAff'];
-//$delLogiq = $_POST['delLogiq'];
-$numArt = $_POST['numArt'];
-$numMemb = $_POST['numMemb'];
+$numCom = sql_escape($_POST['numCom']);
+$dtCreCom = sql_escape($_POST['dtCreCom']);
+$libCom = sql_escape($_POST['libCom']);
+$notifComKOAff = sql_escape($_POST['notifComKOAff']);
+$numArt = sql_escape($_POST['numArt']);
+$numMemb = sql_escape($_POST['numMemb']);
 
 //Insertion dans la table comment
 sql_insert('COMMENT',
-'numCom, dtCreCom, libCom, numArt, numMemb',
-"'$numCom','$dtCreCom', '$libCom','$numArt', '$numMemb'");
+'numCom, dtCreCom, libCom, attModOK, notifComKOAff, delLogiq, numArt, numMemb',
+"'$numCom','$dtCreCom', '$libCom', 0, '$notifComKOAff', 0, '$numArt', '$numMemb'");
 
 
 //Redirection

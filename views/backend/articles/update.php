@@ -36,7 +36,7 @@ $numThem = sql_select("ARTICLE", "numThem", "numArt = $numArt")[0]['numThem'];
         </div>
         <div class="col-md-12">
             <!--Form to update an article-->
-            <form action="<?php echo ROOT_URL . '/api/articles/update.php' ?>" method="post">
+            <form action="<?php echo ROOT_URL . '/api/articles/update.php' ?>" method="post" enctype='multipart/form-data'>
                 <div class="form-group">
                     <label for="dtCreArt">Date de création</label>
                     <input id="numArt" class="form-control" style="display: none" type="text" name="numArt" value="<?php echo($numArt) ?>">
@@ -95,6 +95,8 @@ $numThem = sql_select("ARTICLE", "numThem", "numArt = $numArt")[0]['numThem'];
                     <?php } ?>
                 </select>
                 </div>
+                
+                <input type="file" name="file" id="file">
 
                 <div class="form-group mt-2">
                     <button type="submit" class="btn btn-primary">Modifier</button>

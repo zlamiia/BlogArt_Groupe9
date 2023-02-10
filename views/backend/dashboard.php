@@ -59,8 +59,8 @@ include '../../header.php';
                         <tr>
                             <td>Comments</td>
                             <td>
-                                <a href="/views/backend/comments/list.php" class="btn btn-primary disabled">Liste</a>
-                                <a href="/views/backend/comments/create.php" class="btn btn-success disabled">Créer</a>
+                                <a href="/views/backend/comments/list.php" class="btn btn-primary">Liste</a>
+                                <a href="/views/backend/comments/create.php" class="btn btn-success">Créer</a>
                             </td>
                             <td></td>
                         </tr>
@@ -75,8 +75,8 @@ include '../../header.php';
                         <tr>
                             <td>Keywords</td>
                             <td>
-                                <a href="/views/backend/keywords/list.php" class="btn btn-primary disabled">Liste</a>
-                                <a href="/views/backend/keywords/create.php" class="btn btn-success disabled">Créer</a>
+                                <a href="/views/backend/keywords/list.php" class="btn btn-primary">Liste</a>
+                                <a href="/views/backend/keywords/create.php" class="btn btn-success">Créer</a>
                             </td>
                             <td></td>
                         </tr>
