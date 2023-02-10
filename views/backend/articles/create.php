@@ -1,78 +1,77 @@
 <?php
 include '../../../header.php';
 
-$thematiques = sql_select("THEMATIQUE", "*");
+// $thematiques = sql_select("THEMATIQUE", "*");
+
+$statuts = sql_select("STATUT", "*");
+
 ?>
 
 <!--Bootstrap form to create a new article-->
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>Créer un nouvel article</h1>
+            <img class="ecrire-title"src="/src/images/Ecrire-title.svg" alt="">
         </div>
         <div class="col-md-12">
             <!--Form to create a new article-->
-            <form action="<?php echo ROOT_URL . '/api/articles/create.php' ?>" method="post" enctype='multipart/form-data'>
-
-                <div class="form-group">
-                    <label for="dtCreArt">Date et Heure dépôt article</label>
-                    <input id="dtCreArt" class="form-control" type="datetime-local" name="dtCreArt">
+            <form class="form-div" action="<?php echo ROOT_URL . '/api/articles/create.php' ?>" method="post" enctype='multipart/form-data'>
+                <div class="ecrire-article">
+                    <input class="form-style"id="dtCreArt" class="form-style" type="datetime-local" name="dtCreArt" placeholder="Date et Heure dépôt article">
                 </div>
 
-                <div class="form-group">
-                    <label for="libTitrArt">Titre de l'article</label>
-                    <input id="libTitrArt" class="form-control" type="text" name="libTitrArt" required minlength="1" maxlength="100">
+                <div class="ecrire-article">
+                    <input id="libTitrArt" class="form-style" type="text" name="libTitrArt" required minlength="1" maxlength="100" placeholder="Titre">
                 </div>
                 
-                <div class="form-group">
-                    <label for="libChapoArt">Chapô</label>
-                    <textarea id="libChapoArt" class="form-control" type="text" name="libChapoArt" required minlength="1"></textarea>
+                <div class="ecrire-article">
+                    <textarea id="libChapoArt" class="form-style" type="text" name="libChapoArt" required minlength="1"placeholder="Chapô"></textarea>
                 </div>
-                <div class="form-group">
-                    <label for="libAccrochArt">Accroche</label>
-                    <input id="libAccrochArt" class="form-control" type="text" name="libAccrochArt" required minlength="1" maxlength="100">
+                <div class="ecrire-article">
+                    <input id="libAccrochArt" class="form-style" type="text" name="libAccrochArt" required minlength="1" maxlength="100" placeholder="Accroche">
                 </div>
-                <div class="form-group">
-                    <label for="parag1Art">Paragraphe 1</label>
-                    <textarea id="parag1Art" class="form-control" type="text" name="parag1Art" required minlength="1"></textarea>
+                <div class="ecrire-article">
+                    <textarea id="parag1Art" class="form-style" type="text" name="parag1Art" required minlength="1" placeholder="Paragraphe 1"></textarea>
                 </div>
-                <div class="form-group">
-                    <label for="libSsTitr1Art">Sous-titre 1</label>
-                    <input id="libSsTitr1Art" class="form-control" type="text" name="libSsTitr1Art" required minlength="1" maxlength="100">
+                <div class="ecrire-article">
+                    <input id="libSsTitr1Art" class="form-style" type="text" name="libSsTitr1Art" required minlength="1" maxlength="100" placeholder="Sous-titre 1">
                 </div>
-                <div class="form-group">
-                    <label for="parag2Art">Paragraphe 2</label>
-                    <textarea id="parag2Art" class="form-control" type="text" name="parag2Art" required minlength="1"></textarea>
+                <div class="ecrire-article">
+                    <textarea id="parag2Art" class="form-style" type="text" name="parag2Art" required minlength="1" placeholder="Paragraphe 2"></textarea>
                 </div>
-                <div class="form-group">
-                    <label for="libSsTitr2Art">Sous-titre 2</label>
-                    <input id="libSsTitr2Art" class="form-control" type="text" name="libSsTitr2Art" required minlength="1" maxlength="100">
+                <div class="ecrire-article">
+                    <input id="libSsTitr2Art" class="form-style" type="text" name="libSsTitr2Art" required minlength="1" maxlength="100" placeholder="Sous-titre 2">
                 </div>
-                <div class="form-group">
-                    <label for="parag3Art">Paragraphe 3</label>
-                    <textarea id="parag3Art" class="form-control" type="text" name="parag3Art" required minlength="1"></textarea>
+                <div class="ecrire-article">
+                    <textarea id="parag3Art" class="form-style" type="text" name="parag3Art" required minlength="1" placeholder="Paragraphe 3"></textarea>
                 </div>
-                <div class="form-group">
-                    <label for="libConclArt">Conclusion</label>
-                    <textarea id="libConclArt" class="form-control" type="text" name="libConclArt" required minlength="1"></textarea>
+                <div class="ecrire-article">
+                    <textarea id="libConclArt" class="form-style" type="text" name="libConclArt" required minlength="1" placeholder="Conclusion"></textarea>
                 </div>
-
-                <div class="form-group">
-                <label for="numThem">Thématique</label>
-                <select class="form-select" name="numThem">
-                    <?php foreach ($thematiques as $thematique) { ?>
-                        <option value="<?php echo $thematique['numThem']; ?>"><?php echo $thematique['libThem']; ?></option>
+                <!-- Mieux gérer
+                <div class="form-style">
+                    <label for="urlPhotArt">URL de la photo</label>
+                    <input id="urlPhotArt" class="form-style" type="text" name="urlPhotArt">
+                </div>
+                -->
+                <div class="ecrire-article">
+                    <input id="numThem" class="form-style" type="number" name="numThem" required min="1" max="4" placeholder="Numéro thématique : entre 1 et 4">
+                </div>
+                <div class="ecrire-article">
+                <select class="form-style" name="numStat">
+                    <?php foreach ($statuts as $statut) { ?>
+                        <option value="<?php echo $statut['numStat']; ?>"><?php echo $statut['libStat']; ?></option>
                     <?php } ?>
                 </select>
-
-                <input type="file" name="file" id="file">
-
-                <div class="form-group mt-2">
-                    <button type="submit" class="btn btn-primary">Créer</button>
                 </div>
-
+                <div class="ecrire-article">
+                    <input id="file" class="form-style" type="file" name="file">
+                </div>
+                <div class="ecrire-article mt-2">
+                    <button class="submit" type="submit" class="btn btn-primary">Créer</button>
                 </div>
             </form>
         </div>
     </div>
 </div>
+
