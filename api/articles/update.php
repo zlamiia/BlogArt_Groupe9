@@ -13,7 +13,7 @@ $newparag2Art = sql_escape($_POST['parag2Art']);
 $newlibSsTitr2Art =sql_escape($_POST['libSsTitr2Art']);
 $newparag3Art = sql_escape($_POST['parag3Art']);
 $newlibConclArt = sql_escape($_POST['libConclArt']);
-// $newurlPhotArt = sql_escape($_POST ['urlPhotArt']); Gérer le nom de l'URL
+// $newurlPhotArt = sql_escape($_POST ['urlPhotArt']); 
 $newnumThem =sql_escape($_POST ['numThem']);
 
 
@@ -28,9 +28,5 @@ sql_update('ARTICLE',"libSsTitr2Art = '$newlibSsTitr2Art'","numArt = $numArt");
 sql_update('ARTICLE',"parag3Art = '$newparag3Art'","numArt = $numArt");
 sql_update('ARTICLE',"libConclArt = '$newlibConclArt'","numArt = $numArt");
 sql_update('ARTICLE',"numThem = '$newnumThem'","numArt = $numArt");
-
-
-
-// AFFICHAGE ERREUR SI JAMAIS CHAMPS VIDES A FAIRE
 
 header('Location: ../../views/backend/articles/list.php');

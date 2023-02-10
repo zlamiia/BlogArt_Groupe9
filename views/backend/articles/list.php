@@ -31,6 +31,7 @@ $articles = sql_select("ARTICLE INNER JOIN THEMATIQUE ON ARTICLE.numThem = THEMA
                         <th>Ss-titre 2</th>
                         <th>Paragraphe 3</th>
                         <th>Conclusion</th>
+                        <th>URL Photo</th>
                         <th>Libellé thématique</th>
                         <th>Actions</th>
 
@@ -50,6 +51,7 @@ $articles = sql_select("ARTICLE INNER JOIN THEMATIQUE ON ARTICLE.numThem = THEMA
                             <td><?php echo $article['libSsTitr2Art']; ?></td>
                             <td><?php echo $article['parag3Art']; ?></td>
                             <td><?php echo $article['libConclArt']; ?></td>
+                            <td><?php echo $article['urlPhotArt']; ?></td>
                             <td><?php echo $article['libThem']; ?></td>
 
                             <td>

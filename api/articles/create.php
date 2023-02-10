@@ -12,18 +12,17 @@ $parag2Art = sql_escape($_POST['parag2Art']);
 $libSsTitr2Art = sql_escape($_POST['libSsTitr2Art']);
 $parag3Art = sql_escape($_POST['parag3Art']);
 $libConclArt = sql_escape($_POST['libConclArt']);
-// $urlPhotArt = sql_escape($_POST ['urlPhotArt']); Gérer le nom de l'URL
 $numThem = sql_escape($_POST ['numThem']);
 
-// insérer le $path dans la DB lors du sql_insert()
 
-/*if(isset($_FILES)) {
+if(isset($_FILES)) {
     $path = upload_image($_FILES);
-}*/
+    $urlPhotArt = sql_escape($path);
+}
 
 sql_insert('ARTICLE',
-'dtCreArt, libTitrArt, libChapoArt, libAccrochArt, parag1Art, libSsTitr1Art, parag2Art, libSsTitr2Art, parag3Art, libConclArt, numThem',
-"'$dtCreArt','$libTitrArt', '$libChapoArt', '$libAccrochArt', '$parag1Art', '$libSsTitr1Art', '$parag2Art', '$libSsTitr2Art', '$parag3Art', '$libConclArt', $numThem");
+'dtCreArt, libTitrArt, libChapoArt, libAccrochArt, parag1Art, libSsTitr1Art, parag2Art, libSsTitr2Art, parag3Art, libConclArt, urlPhotArt, numThem',
+"'$dtCreArt','$libTitrArt', '$libChapoArt', '$libAccrochArt', '$parag1Art', '$libSsTitr1Art', '$parag2Art', '$libSsTitr2Art', '$parag3Art', '$libConclArt', '$urlPhotArt', $numThem");
 
 
 header('Location: ../../views/backend/articles/list.php');
