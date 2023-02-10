@@ -115,41 +115,8 @@ sql_connect();
         <h1 class="subtitle">Retrouvez l’univers et les dernières nouveautés de l’art digital</h1>
         <!-- Container Carte Evenements  -->
         <div class="container evenement-home-content">
-            <svg class="evenement-home-carte" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1158.27 293.71">
-                <defs>
-                    <style>
-                        .cls-1{
-                            fill:#4247c6;
-                        }
-                        .cls-2{
-                            fill:#fff;
-                            stroke:#4247c6;
-                            stroke-width:3px;
-                        }
-                    </style>
-                </defs>
-                <!-- Border Carte Evenement -->
-                <path class="cls-1" d="M34.27,12.37h1104a20,20,0,0,1,20,20v242a20,20,0,0,1-20,20H34.27a20,20,0,0,1-20-20v-242A20,20,0,0,1,34.27,12.37Z" transform="translate(0 -0.64)"/>
-                <path class="cls-2" d="M20,2.14H1124a18.5,18.5,0,0,1,18.5,18.5v242a18.5,18.5,0,0,1-18.5,18.5H20a18.5,18.5,0,0,1-18.5-18.5v-242A18.5,18.5,0,0,1,20,2.14Z" transform="translate(0 -0.64)"/>
-                <!-- Contenue Carte Evenement -->
-                <foreignObject class="border" x="0" y="0" width="1145px" height="280px">
-                    <div class="container row evenement-home-carte-content">
-                        <div class="col-1 border evenement-carte-content-date">
-                            <p>wsh</p>
-                        </div>
-                        <div class="col-2 border evenement-carte-content-img">
-                            <p>wsh</p>
-                        </div>
-                        <div class="col-6 border evenement-carte-content-texte">
-                            <p>wsh</p>
-                        </div>
-                        <div class="col-3 border evenement-carte-content-button">
-                            <p>wsh</p>
-                        </div>
-                    </div>
-                </foreignObject>
-            </svg> <!-- On a utilisé des paths svg car on peut facilement manipuler le contenu à l'interieure et le svg est mieux integre dans le site -->
-        </div>      <!-- sans compter qu'il nous donne la possible de realiser des animations interessante plustard -->
+            <img class="evenement" src="/src/images/evenements.svg" alt="">
+        </div>      
     </div>
 <?php require_once 'cookies.php'; ?>
 <?php require_once 'footer.php'; ?>

@@ -45,8 +45,8 @@
             </div>
             <div class="col text-center">
                 <img class="footer-tags" src="/src/images/Mentions.svg" alt="">
-                <a href="">
-                    <p class="text-footer" href="">Lire le document</p>
+                <a href="/src/images/Mentions-légales.pdf">
+                    <p class="text-footer">Lire le document</p>
                 </a>
             </div>
         </div>

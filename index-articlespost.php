@@ -85,14 +85,14 @@ foreach($articles as $key => $article){
         <div class="container comment-user">
             <div class="row user-photo-name">
                 <div class="col-4 comment-user-photo">
-
+                    
                 </div>
                 <div class="col-7 comment-user-name">
-                    <p>placeholder</p>
+                    <p>pedro-barros</p>
                 </div>
             </div>
             <div class="comment-user-comment">
-                <p>placeholder</p>
+                <p>Super article !</p>
             </div>
         </div>
     </div>

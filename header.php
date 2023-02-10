@@ -46,7 +46,20 @@ require_once 'config.php';
 </nav> -->
     <!-- Logo-->
     <img class="logo" src="/src/images/Logo.svg" alt="">
-    <img class="menu-burger"src="/src/images/menu-burger.svg" alt="">
+    <input type="checkbox" id="hamburger-input" class="burger-shower" />
+    <label id="hamburger-menu" for="hamburger-input">
+      <nav id="sidebar-menu">
+        <h3>Menu</h3>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/../../index-articles.php">Articles</a></li>
+          <li><a href="#">Évènements</a></li>
+          <li><a href="/views/backend/dashboard.php">Admin</a></li>
+        </ul>
+      </nav>
+    </label>
+
+    <!-- <div class="overlay"></div> -->
     <!-- Header + Cover -->
     <!-- Header -->
     <div class="header container">
@@ -67,7 +80,7 @@ require_once 'config.php';
         </header>
     </div>
     <div class="search">
-
+        <input class="form-search" id="recherche" name="recherche" placeholder="Recherche">
     </div>
     <a href="index-connection.php">
       <div class="account-login">
