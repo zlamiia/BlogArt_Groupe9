@@ -45,7 +45,7 @@
             </div>
             <div class="col text-center">
                 <img class="footer-tags" src="/src/images/Mentions.svg" alt="">
-                <a href="/src/images/Mentions-légales.pdf">
+                <a href="<?php echo ROOT_URL . '/src/images/Mentions-légales.pdf'?>">
                     <p class="text-footer">Lire le document</p>
                 </a>
             </div>

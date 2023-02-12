@@ -29,7 +29,7 @@ sql_connect();
             <a href="index-articlespost.php?idArt=<?php echo $article['numArt']; ?>">
                 <div class="articles-info">
                     <div class="articles-img_box-home">
-                        <img class="articles-img_box-home img-shadow" src="/src/images/<?php echo $article['urlPhotArt']?>" alt="">
+                        <img class="articles-img_box-home img-shadow" src="<?php echo $article['urlPhotArt']?>" alt="">
                     </div>
                     <div class="articles-text-home">
                         <p>

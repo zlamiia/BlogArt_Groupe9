@@ -36,8 +36,8 @@ foreach($articles as $key => $article){
                 <?php echo $article['libChapoArt']; ?>
             </h2>
         </div>
-        <div class="container img-content">
-            <img class="img-box img-shadow" src="/src/images/<?php echo $article['urlPhotArt']?>" alt="">
+        <div class="container img-content text-center">
+            <img class="img-box img-shadow" src="<?php echo $article['urlPhotArt']?>" alt="">
         </div>
         <div class="container accroche-content">
             <p>
@@ -110,7 +110,7 @@ foreach($articles as $key => $article){
             <a href="index-articlespost.php?idArt=<?php echo $article['numArt']; ?>">
                 <div class="articles-info">
                     <div class="articles-img_box-autres">
-                        <img class="articles-img_box-autres img-shadow" src="/src/images/<?php echo $article['urlPhotArt']?>" alt="">
+                        <img class="articles-img_box-autres img-shadow" src="<?php echo $article['urlPhotArt']?>" alt="">
                     </div>
                     <div class="articles-text-autres">
                         <p>

@@ -1,10 +1,10 @@
 /* Index */
-.container{
+/* .container{
     border: 1px solid red;
 }
 .container-fluid{
     border: 1px solid red;
-}
+} */
 
 .logo{
     position: fixed;
@@ -14,7 +14,7 @@
     width: 4vw;
 }
 .cover{
-    margin-top: -90px;
+    margin-top: -65px;
     /* margin-bottom: 169.88px; */
 }
 .menu-burger{
@@ -168,7 +168,7 @@
     display: none;
 }
 .header-content{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     font-size: 30px;
 }
 a:link{
@@ -295,13 +295,13 @@ a:active {
     margin-bottom: 20px;
 }
 .img-content{
-    padding-left: 7vw !important;
+    padding-left: 5vw !important;
     padding-right: 7vw !important;
     margin-bottom: 50px;
     width: 100vw;
 }
 .img-box{
-    width: 57vw;
+    width: auto;
 }
 .accroche-content{
     padding-left: 10.4175vw !important;
@@ -324,6 +324,7 @@ a:active {
 .conclusion-content{
     padding-left: 10.4175vw !important;
     padding-right: 10.4175vw !important;
+    margin-top: 50px !important;
 }
 
 h1.subtitle{
@@ -347,29 +348,30 @@ h1.subtitle{
 .articles-home-img_box-1{
     background-color: #4247C6;
     height: 427.31px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 .articles-home-text-1{
     height: 427.31px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 .articles-img_box-home{
     background-color: #4247C6;
     height: 228.83px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 30vw;
 }
 .articles-text-home{
     height: 228.83px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 30vw;
     margin-top: 15px;
+    margin-bottom: 80px;
 }
 .articles-text-home p{
     font-family: 'product_sansregular';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 17px;
     color: black;
 }
@@ -384,12 +386,12 @@ h1.subtitle{
 .articles-img_box{
     background-color: #4247C6;
     height: 354.63px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 46vw;
 }
 .articles-text{
     height: 228.83px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 46vw;
     margin-bottom: 50px;
     margin-top: 15px;
@@ -398,7 +400,7 @@ h1.subtitle{
     font-family: 'product_sansregular';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 17px;
     color: black;
 }
@@ -413,12 +415,12 @@ h1.subtitle{
 .articles-img_box-autres{
     background-color: #4247C6;
     height: 228.83px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 30vw;
 }
 .articles-text-autres{
     height: 228.83px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 30vw;
     margin-top: 15px;
 }
@@ -426,7 +428,7 @@ h1.subtitle{
     font-family: 'product_sansregular';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 17px;
     color: black;
 }
@@ -442,11 +444,11 @@ h1.subtitle{
 .articles-img_box-3{
     background-color: #4247C6;
     height: 354.63px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 .articles-text-3{
     height: 228.83px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 .space-articles-2-3{
     width: 3.75vw;
@@ -548,7 +550,7 @@ h6.text-footer{
     position: absolute;
     border: none;
     background-color: transparent;
-    top: 65%;
+    top: 70%;
     left: 75%;
     width: 2vw;
     height: auto;

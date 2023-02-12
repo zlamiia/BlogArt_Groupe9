@@ -3,7 +3,7 @@ include '../../../header.php';
 
 // $thematiques = sql_select("THEMATIQUE", "*");
 
-$statuts = sql_select("STATUT", "*");
+$thematiques = sql_select("THEMATIQUE", "*");
 
 ?>
 
@@ -55,12 +55,9 @@ $statuts = sql_select("STATUT", "*");
                 </div>
                 -->
                 <div class="ecrire-article">
-                    <input id="numThem" class="form-style" type="number" name="numThem" required min="1" max="4" placeholder="Numéro thématique : entre 1 et 4">
-                </div>
-                <div class="ecrire-article">
-                <select class="form-style" name="numStat">
-                    <?php foreach ($statuts as $statut) { ?>
-                        <option value="<?php echo $statut['numStat']; ?>"><?php echo $statut['libStat']; ?></option>
+                <select class="form-style" name="numThem">
+                    <?php foreach ($thematiques as $thematique) { ?>
+                        <option value="<?php echo $thematique['numThem']; ?>"><?php echo $thematique['libThem']; ?></option>
                     <?php } ?>
                 </select>
                 </div>
