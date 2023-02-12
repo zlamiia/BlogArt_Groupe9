@@ -25,14 +25,14 @@ Accessible depuis : Homepage
 **Identifiant localhost**
 
 > admin :
-> email : emailadmin1@gmail.com
-> pseudo : admin1
-> mdp : admin456admin654
+> email : pedro@gmail.com
+> pseudo : pbarros
+> mdp : pbp
 
 > membre : 
-> email : louis.dupont@gmail.com
-> pseudo : louisdpnt
-> mdp : lemotdepassedelouis456
+> email : kevin@gmail.com
+> pseudo : kev
+> mdp : 1234
 
 
 ### Structure et règles de la Base de données
