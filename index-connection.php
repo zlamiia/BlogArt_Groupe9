@@ -14,7 +14,7 @@ sql_connect();
                     <br>
                     <input class="login-password" type="text" id="password" name="password" placeholder="Password">
                     <br>
-                    <input class="submit-connect" type="submit" form="form-connect" value="Connect"/>
+                    <input href="index.php" class="submit-connect" type="submit" form="form-connect" value="Connect"/>
                 </form>
                 <h6 onclick="createAccount()">Créer compte</h6>
             </div>

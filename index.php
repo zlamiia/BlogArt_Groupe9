@@ -5,13 +5,12 @@ error_reporting(E_ALL & ~E_NOTICE);
 require_once 'header.php'; 
 sql_connect();
 
-// print_r(curl("https://reqres.in/api/users", "POST", '{"name": "morpheus", "job": "leader"}'));
 ?>
 <!-- Cover -->
-<img class="container-fluid cover" src="/src/images/Cover.svg" alt="">
+<img class="container-fluid cover" src="<?php echo ROOT_URL . '/src/images/Cover.svg'?>" alt="Cover">
     <!-- Articles Homepage -->
     <div class="container-fluid title-content">
-        <img class="title-img"src="/src/images/Articles-title.svg" alt="">
+        <img class="title-img" src="<?php echo ROOT_URL . '/src/images/Articles-title.svg'?>" alt="Articles">
         <h1 class="subtitle">Retrouvez l’univers et les dernières nouveautés de l’art digital</h1>
         <!-- Container Articles -->
 
@@ -26,10 +25,10 @@ sql_connect();
             <?php 
                 foreach($articles as $key => $article){
             ?>
-            <a href="index-articlespost.php?idArt=<?php echo $article['numArt']; ?>">
+            <a href="<?php echo ROOT_URL . '/index-articlespost.php?idArt='?><?php echo $article['numArt']; ?>">
                 <div class="articles-info">
                     <div class="articles-img_box-home">
-                        <img class="articles-img_box-home img-shadow" src="<?php echo $article['urlPhotArt']?>" alt="">
+                        <img class="articles-img_box-home img-shadow" src="<?php echo ROOT_URL ?><?php echo $article['urlPhotArt']?>" alt="<?php echo $article['urlPhotArt']?>">
                     </div>
                     <div class="articles-text-home">
                         <p>
@@ -62,60 +61,16 @@ sql_connect();
                 <?php 
                     }
                 ?>
-            </a>
-            
+            </a>     
         </div>
-        <!-- 1er article image et texte 
-        <div class="row articles-home-1">
-            <div class="col-8 articles-home-img_box-1">
-
-            </div>
-            <div class="col articles-home-text-1">
-                <p>
-                    <?php 
-        
-                    ?>
-                </p>
-            </div>
-        </div>
-        
-        !-- 2eme et 3eme articles image  --
-        <div class="row articles-2-3-img">
-            <div class="col articles-img_box-2">
-
-            </div>
-            <div class="col-1 space-articles-2-3"></div> !-- Espacement entre les deux div --
-            <div class="col articles-img_box-3">
-                
-            </div>
-        </div>
-        !-- 2eme et 3eme articles texte  --
-        <div class="row articles-2-3-text">
-
-            <div class="col articles-text-2">
-                <p>
-                    <?php 
-                    
-                    ?>
-                </p>
-            </div>
-            <div class="col-1 space-articles-2-3"></div> !-- Espacement entre les deux div --
-            <div class="col articles-text-3">
-                <p>
-                    <?php 
-                    
-                    ?>
-                </p>      
-            </div>
-        </div> -->
     </div>
     <!-- Evenements Homepage  -->
     <div class="container-fluid home-content">
-        <img src="/src/images/Evenements-title.svg" alt="">
+        <img src="<?php echo ROOT_URL . '/src/images/Evenements-title.svg'?>" alt="Evenements">
         <h1 class="subtitle">Retrouvez l’univers et les dernières nouveautés de l’art digital</h1>
         <!-- Container Carte Evenements  -->
         <div class="container evenement-home-content">
-            <img class="evenement" src="/src/images/evenements.svg" alt="">
+            <img class="evenement" src="<?php echo ROOT_URL . '/src/images/evenements.svg'?>" alt="Evenements-placeholder">
         </div>      
     </div>
 <?php require_once 'cookies.php'; ?>

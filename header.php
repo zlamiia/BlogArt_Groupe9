@@ -20,71 +20,46 @@ require_once 'config.php';
 ?>
 <body>
 
-<!-- <nav class="navbar navbar-expand-lg bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">BlogArt</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/views/backend/dashboard.php">Admin</a>
-        </li>
-      </ul>
-    </div>
-    -- right align --
-    <div class="d-flex">
-      <a class="btn btn-primary m-1" href="/views/backend/members/login.php" role="button">Login</a>
-      <a class="btn btn-dark m-1" href="/views/backend/members/register.php" role="button">Register</a>
-      <a class="btn btn-primary m-1" href="/views/backend/members/login.php" role="button">Mon compte</a>
-    </div>
-  </div>
-</nav> -->
     <!-- Logo-->
-    <img class="logo" src="/src/images/Logo.svg" alt="">
+    <img class="logo" src="<?php echo ROOT_URL . '/src/images/Logo.svg'?>" alt="Logo">
+    <!-- Menu mobile -->
     <input type="checkbox" id="hamburger-input" class="burger-shower" />
     <label id="hamburger-menu" for="hamburger-input">
       <nav id="sidebar-menu">
         <h3>Menu</h3>
         <ul>
           <li><a href="/">Home</a></li>
-          <li><a href="/../../index-articles.php">Articles</a></li>
+          <li><a href="<?php echo ROOT_URL . '/../../index-articles.php'?>">Articles</a></li>
           <li><a href="#">Évènements</a></li>
-          <li><a href="/views/backend/dashboard.php">Admin</a></li>
+          <li><a href="<?php echo ROOT_URL . '/views/backend/dashboard.php'?>">Admin</a></li>
         </ul>
       </nav>
     </label>
 
-    <!-- <div class="overlay"></div> -->
-    <!-- Header + Cover -->
     <!-- Header -->
     <div class="header container">
         <header class="row container text-center"> 
-            <img src="/src/images/menu-burger.svg" alt="">                   
+            <img src="<?php echo ROOT_URL . '/src/images/menu-burger.svg'?>" alt="Menu">                   
             <div class="col header-content">
                 <a href="/">Home</a>
             </div>
             <div class="col header-content">
-                <a href="/../../index-articles.php">Articles</a>
+                <a href="<?php echo ROOT_URL . '/../../index-articles.php'?>">Articles</a>
             </div>
             <div class="col header-content">
-                <a href="">Évènements</a>
+                <a href="#">Évènements</a>
             </div>
             <div class="col header-content">
-                <a href="/views/backend/dashboard.php">Admin</a>
+                <a href="<?php echo ROOT_URL . '/views/backend/dashboard.php'?>">Admin</a>
             </div>
         </header>
     </div>
     <div class="search">
         <input class="form-search" id="recherche" name="recherche" placeholder="Recherche">
     </div>
-    <a href="index-connection.php">
+    <a href="<?php echo ROOT_URL . '/index-connection.php'?>">
       <div class="account-login">
-          <img class="user-account" src="/src/images/User.svg" alt="">
+          <img class="user-account" src="<?php echo ROOT_URL . '/src/images/User.svg'?>" alt="Se connecter">
       </div>
     </a>
     <div class="margin-dash"></div>

@@ -1,7 +1,7 @@
 
     <!-- A propos -->
     <div class="container-fluid a-propos">
-        <img class="footer-tags-apropos"src="/src/images/Apropos.svg" alt="">
+        <img class="footer-tags-apropos"src="<?php echo ROOT_URL . '/src/images/Apropos.svg'?>" alt="A propos">
         <h6 class="text-footer">Bordeaux Digit'Arts est un blog qui célèbre la ville de Bordeaux à travers l'art digital. Nous aimons partager les nouveautés et tendances de la scène artistique numérique de Bordeaux avec le monde. Nous publions régulièrement des articles sur les activités, les artistes et autres aspects de l'art numérique à Bordeaux, ainsi que des informations sur les événements à venir dans la ville. Rejoignez-nous pour découvrir les dernières tendances et nouveautés de l'art numérique à Bordeaux.</h6>
     </div>
     <!-- Newsletter  -->
@@ -22,29 +22,33 @@
         </div>
     </div>
 
+    <!-- footer  -->
     <div class="container-fluid footer">
+        <!-- Contact  -->
         <div class="row">
             <div class="col text-center">
-                <img class="footer-tags" src="/src/images/Aide.svg" alt="">
+                <img class="footer-tags" src="<?php echo ROOT_URL . '/src/images/Aide.svg'?>" alt="Aide">
                 <p class="text-footer">
                     contact@bdablog.com
                 </p>
             </div>
+            <!-- Résaux sociaux -->
             <div class="col text-center">
-                <img class="footer-tags" src="/src/images/Suivez.svg" alt="">
+                <img class="footer-tags" src="<?php echo ROOT_URL . '/src/images/Suivez.svg'?>" alt="Suivez">
                 <br>
                 <a href="">
-                    <img class="social-medias" src="/src/images/instagram.svg" alt="">
+                    <img class="social-medias" src="<?php echo ROOT_URL . '/src/images/instagram.svg'?>" alt="Instagram">
                 </a>
                 <a href="">
-                    <img class="social-medias" src="/src/images/twitter.svg" alt="">
+                    <img class="social-medias" src="<?php echo ROOT_URL . '/src/images/twitter.svg'?>" alt="Twitter">
                 </a>
                 <a href="">
-                    <img class="social-medias" src="/src/images/tiktok.svg" alt="">
+                    <img class="social-medias" src="<?php echo ROOT_URL . '/src/images/tiktok.svg'?>" alt="TikTok">
                 </a>
             </div>
+            <!-- Mentions legales  -->
             <div class="col text-center">
-                <img class="footer-tags" src="/src/images/Mentions.svg" alt="">
+                <img class="footer-tags" src="<?php echo ROOT_URL . '/src/images/Mentions.svg'?>" alt="Mentions Légales">
                 <a href="<?php echo ROOT_URL . '/src/images/Mentions-légales.pdf'?>">
                     <p class="text-footer">Lire le document</p>
                 </a>

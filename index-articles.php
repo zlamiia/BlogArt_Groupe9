@@ -6,7 +6,7 @@ sql_connect();
 
 <!-- Titre page  -->
 <div class="container-fluid title-content">
-        <img src="/src/images/Articles-title.svg" alt="">
+        <img src="<?php echo ROOT_URL . '/src/images/Articles-title.svg'?>" alt="Articles">
         <h1 class="subtitle">Retrouvez l’univers et les dernières nouveautés de l’art digital</h1>
         <!-- Articles -->
         <?php
@@ -20,10 +20,12 @@ sql_connect();
             <?php 
                 foreach($articles as $key => $article){
             ?>
-            <a href="index-articlespost.php?idArt=<?php echo $article['numArt']; ?>">
+            <!-- Permet de recuperer l'id de chaque article et afficher le bon artcile sur la page index-articlespost.php -->
+            <a href="<?php echo ROOT_URL . '/index-articlespost.php?idArt='?><?php echo $article['numArt']; ?>"> 
+            <!-- Affichage des Articles -->
                 <div class="articles-info">
                     <div class="articles-img_box">
-                        <img class="articles-img_box img-shadow" src="<?php echo $article['urlPhotArt']?>" alt="">
+                        <img class="articles-img_box img-shadow" src="<?php echo ROOT_URL ?><?php echo $article['urlPhotArt']?>" alt="<?php echo $article['urlPhotArt']?>">
                     </div>
                     <div class="articles-text">
                         <p>

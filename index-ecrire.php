@@ -1,11 +1,10 @@
 <?php require_once 'header.php'; 
 sql_connect();
 
-// print_r(curl("https://reqres.in/api/users", "POST", '{"name": "morpheus", "job": "leader"}'));
 ?>
 
 <!-- Titre page  -->
-<img class="ecrire-title"src="/src/images/Ecrire-title.svg" alt="">
+<img class="ecrire-title" src="<?php echo ROOT_URL . '/src/images/Ecrire-title.svg'?>" alt="Ecrire">
     
     <!-- Form pour ecrire l'article  -->
     <div class="container ecrire-article">
