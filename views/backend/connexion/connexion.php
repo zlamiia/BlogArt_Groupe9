@@ -25,7 +25,10 @@ include '../../../header.php';
 
                 <div class="form-group mt-2">
                     <button type="submit" class="btn btn-primary">Se connecter</button>
+                    <a href="<?php echo ROOT_URL . '/views/backend/connexion/inscription.php'?>" class="btn btn-primary" >S'inscrire</a>
                 </div>
+
+
 
             </form>
         </div>

@@ -57,10 +57,14 @@ require_once 'config.php';
     <div class="search">
         <input class="form-search" id="recherche" name="recherche" placeholder="Recherche">
     </div>
-    <a href="<?php echo ROOT_URL . '/index-connection.php'?>">
+    <a href="<?php echo ROOT_URL . '/views/backend/connexion/connexion.php'?>">
       <div class="account-login">
           <img class="user-account" src="<?php echo ROOT_URL . '/src/images/User.svg'?>" alt="Se connecter">
       </div>
+    </a>
+    
+    <a class="btn btn-primary account-logout" href="<?php echo ROOT_URL . '/api/register/deconnexion.php'?>">
+      <p>Logout</p>
     </a>
     <div class="margin-dash"></div>
 

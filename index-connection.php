@@ -9,10 +9,10 @@ sql_connect();
             <div class="col"></div>
             <div id="login" class="col-4 connection-box">
                 <h1>Login</h1>
-                <form id="form-connect" action="">
-                    <input class="login-username" type="text" id="username" name="username" placeholder="Username">
+                <form id="form-connect" action="<?php echo ROOT_URL . '/api/register/connexion.php' ?>" method="post">
+                    <input class="login-username" type="text" id="pseudoMemb" name="pseudoMemb" placeholder="Username">
                     <br>
-                    <input class="login-password" type="text" id="password" name="password" placeholder="Password">
+                    <input class="login-password" type="text" id="passMemb" name="passMemb" placeholder="Password">
                     <br>
                     <input href="index.php" class="submit-connect" type="submit" form="form-connect" value="Connect"/>
                 </form>

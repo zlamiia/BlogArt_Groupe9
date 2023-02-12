@@ -8,6 +8,7 @@ sql_connect();
 ?>
 <!-- Cover -->
 <img class="container-fluid cover" src="<?php echo ROOT_URL . '/src/images/Cover.svg'?>" alt="Cover">
+<p><?php session_start(); echo implode(', ', $_SESSION["user"]);?></p>
     <!-- Articles Homepage -->
     <div class="container-fluid title-content">
         <img class="title-img" src="<?php echo ROOT_URL . '/src/images/Articles-title.svg'?>" alt="Articles">

@@ -1,6 +1,6 @@
 <?php
 
-require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
+require_once __DIR__ . '/../../config.php';
 
 
 // Vérification si formulaire envoyé
@@ -53,7 +53,7 @@ if (!empty (sql_escape($_POST))) {
 
         //var_dump($_SESSION); die;
 
-        header('Location: ../../connexionverif2.php');
+        header('Location: /../../connexionverif.php');
 
     } else {
         die("Formulaire incomplet");

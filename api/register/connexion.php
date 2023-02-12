@@ -1,6 +1,6 @@
 <?php
 
-require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
+require_once __DIR__ . '/../../config.php';
 
 $pseudo = $_POST['pseudoMemb'];
 
@@ -51,10 +51,12 @@ if (!empty (sql_escape($_POST))) {
         "statut" => $user["numStat"],
     ];
 
+    $_SESSION['logged_in'] = true;
+
     // Rediriger vers page mon compte
     // PEDRO redirige le vers la homepage peut être afficher un message : vous êtes connectés
 
-    header('Location: ../../connexionverif.php');
+    header('Location: /../../connexionverif.php');
 
 
 
