@@ -36,7 +36,7 @@ if (!empty (sql_escape($_POST))) {
 
         // Connexion BDD et requête sql
 
-        $sql = sql_insert("MEMBRE", "nomMemb, prenomMemb, pseudoMemb, passMemb, eMailMemb, numStat",
+        $sql = sql_insert("MEMBRE", "prenomMemb, nomMemb, pseudoMemb, passMemb, eMailMemb, numStat",
         "'$prenom', '$nom', '$pseudo', '$pass', '$email', 3");
 
         // Démarrage de la session
@@ -51,10 +51,9 @@ if (!empty (sql_escape($_POST))) {
             "statut" => ["STATUT_USER"],
         ];
 
-        var_dump($_SESSION); die;
-            
+        //var_dump($_SESSION); die;
 
-
+        
     } else {
         die("Formulaire incomplet");
     }

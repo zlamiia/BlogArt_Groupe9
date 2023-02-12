@@ -54,13 +54,7 @@ if (!empty (sql_escape($_POST))) {
     // Rediriger vers page mon compte
     // PEDRO redirige le vers la homepage peut être afficher un message : vous êtes connectés
 
-
-
-
-
-
-
-
+    header('Location: ../../connexionverif.php');
 
 
 
