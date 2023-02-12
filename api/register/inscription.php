@@ -53,7 +53,8 @@ if (!empty (sql_escape($_POST))) {
 
         //var_dump($_SESSION); die;
 
-        
+        header('Location: ../../connexionverif2.php');
+
     } else {
         die("Formulaire incomplet");
     }
