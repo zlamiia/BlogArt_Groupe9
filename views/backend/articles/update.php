@@ -87,6 +87,7 @@ $numThem = sql_select("ARTICLE", "numThem", "numArt = $numArt")[0]['numThem'];
                     <input id="numArt" class="form-control" style="display: none" type="text" name="numArt" value="<?php echo($numArt) ?>">
                     <textarea id="libConclArt" class="form-control" type="text" name="libConclArt" required minlength="1"><?php echo($libConclArt) ?></textarea>
                 </div>
+                
                 <div class="form-group">
                 <label for="numThem">Thématique</label>
                 <select class="form-select" name="numThem">

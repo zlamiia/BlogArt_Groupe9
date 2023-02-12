@@ -78,3 +78,19 @@ function upload_image($files)
         }
     }
 }
+
+
+function clean_session() 
+{
+    session_unset();
+    session_destroy();
+}
+
+function is_logged()
+{
+    return true;
+}
+
+function is_admin() {
+    // si numStat = 1 admin return true;
+}
