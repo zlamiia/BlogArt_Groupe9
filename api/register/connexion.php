@@ -58,10 +58,6 @@ if (!empty (sql_escape($_POST))) {
 
 
 
-
-
-
-
     } else {
         die("Formulaire incomplet");
     }
