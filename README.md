@@ -1,18 +1,57 @@
-# Blogart Template
+Projet MMI - Blog'Art
 
-## Setup
+## Fonctionnalités
 
-## Architecture
+=> ici la liste des features implémentées et valides
+- Création, Modification et Suppression Status dans page Admin
+- Création, Modification et Suppression Membres dans page Admin
+- Création, Modification et Suppression Articles dans page Admin
+- Création, Modification et Suppression Thématiques dans page Admin
+- Création, Modification et Suppression Commentaires dans page Admin
+- Création, Modification et Suppression Likes dans page Admin
+- Création, Modification Mots clés dans page Admin
 
- - **api** - Contains all php calls for example "create_user.php"
-- **classes** - Contains all classes for example "users.php"
-- **config** - Contains all the configuration files specific to the operation of the application, for example "security.php"
-- **functions** - Contains all the functions of your code for example "users.php"
-- **views** - Contain all front
-- **src** - Contain all sources files or external libs
-## Files to complete
-- **.env** - Foreach user exemple in .env.example
-- **config/security.php** - Check user cookie
-- **index.php** - Must be the homepage
-- **views** - All your pages
-- 
+=> ici la liste des features non implémentées
+- Suppression mots clés
+- Création, modification et suppression mot clé articles
+- Accès aux commentaires et likes aux utilisateurs connectés
+
+
+## Panel Admin
+
+Accessible depuis : Homepage
+
+
+**Identifiant localhost**
+
+> admin :
+> email : emailadmin1@gmail.com
+> pseudo : admin1
+> mdp : admin456admin654
+
+> membre : 
+> email : louis.dupont@gmail.com
+> pseudo : louisdpnt
+> mdp : lemotdepassedelouis456
+
+
+### Structure et règles de la Base de données
+
+La base de données fournie :
+=> la votre épurée et mise à jour
+
+### Pour les utilisteurs/super-admin
+
+> mettre conditions pour leur permettre l'accès à la page admin que si connectés
+
+### Pour les utilisteurs/membres
+
+> pas encore d'accès à l'espace commentaires et likes mais connexion établie
+  reste à mettre des conditions pour limiter l'accès à page admin
+  et conditions pour mettre l'accès aux commentaires / likes qu'un visiteur n'a pas
+
+
+### Pour les autres éléments petinents à nous préciser
+
+> connexion à sécuriser avec vérifications de l'existant dans la bdd avant nouvelle création de compte
+> page évènements à implémenter
